@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Magda Pires · Pires Contabilidade · Araguaína-TO</title>
 <meta name="description" content="Contabilidade estratégica para quem busca clareza, segurança e crescimento. Magda Helley Costa Pires, CRC-TO 005688/O-7, Araguaína, Tocantins.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Magda Pires · Pires Contabilidade · Araguaína-TO">
+<meta property="og:description" content="Contabilidade estratégica com clareza, segurança e crescimento. Araguaína, Tocantins.">
+<meta property="og:image" content="https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Magda Pires · Pires Contabilidade">
+<meta name="twitter:description" content="Contabilidade estratégica com clareza, segurança e crescimento. Araguaína-TO.">
+<meta name="twitter:image" content="https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AccountingService","name":"Pires Contabilidade","url":"https://revellaia.github.io/pires-contabilidade/","logo":"https://revellaia.github.io/pires-contabilidade/assets/logo.png","image":"https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg","description":"Contabilidade estratégica para quem busca clareza, segurança e crescimento.","telephone":"+55-63-99214-1495","email":"pirescontabilidadeadm@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua dos Eletricistas, 138, Qd. TF, Lote 01","addressLocality":"Araguaína","addressRegion":"TO","addressCountry":"BR"},"founder":{"@type":"Person","name":"Magda Helley Costa Pires","jobTitle":"CEO","hasCredential":"CRC-TO 005688/O-7"},"sameAs":["https://www.instagram.com/pirescontabilidade.to"]}
+</script>
 <script>document.documentElement.className += ' reveal-ready';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +62,43 @@
   }
   @media (max-width:560px){
     .pc-futmosaic{ grid-template-columns:1fr !important; }
+    .pc-journey{ grid-template-columns:1fr !important; }
+    .pc-auth{ grid-template-columns:1fr !important; }
+    .pc-cta-portrait{ max-height:82vw !important; aspect-ratio:auto !important; }
+  }
+  /* ---- hamburger + mobile menu ---- */
+  .pc-hamburger{ display:none; background:none; border:none; cursor:pointer; padding:8px 0; flex-direction:column; gap:6px; }
+  .pc-hamburger .hb{ display:block; width:24px; height:1.5px; background:#2B2823; border-radius:2px; transition:transform .3s ease,opacity .25s ease; }
+  .pc-mobile-menu{ position:fixed; inset:0; background:rgba(244,239,231,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:49; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .38s cubic-bezier(.16,.7,.3,1), visibility .38s; }
+  .pc-mobile-menu.open{ opacity:1; visibility:visible; pointer-events:auto; }
+  .pc-mobile-menu .mm-link{ text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:clamp(32px,9vw,42px); font-weight:500; color:#2B2823; letter-spacing:-0.01em; padding:9px 0; }
+  .pc-mobile-menu .mm-cta{ margin-top:26px; text-decoration:none; background:#2B2823; color:#F4EFE7 !important; padding:16px 34px; border-radius:999px; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; letter-spacing:.02em; font-weight:500; }
+  .pc-mobile-menu .mm-close{ position:absolute; top:22px; right:clamp(22px,5vw,72px); background:none; border:none; cursor:pointer; font-family:'Hanken Grotesk',sans-serif; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; padding:10px; }
+  /* email overflow */
+  [href^="mailto"]{ word-break:break-all; }
+  /* ---- nav gradient + scroll progress ---- */
+  [data-nav]::before{ content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6); pointer-events:none; }
+  #pc-progress{ position:fixed; top:0; left:0; height:2px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6); z-index:101; width:0; transition:width .1s linear; pointer-events:none; }
+  /* ---- service card hover ---- */
+  .pc-svc-item{ transition:transform .45s cubic-bezier(.16,.7,.3,1); }
+  .pc-svc-item:hover{ transform:translateY(-5px); }
+  .pc-svc-highlight{ transition:transform .45s cubic-bezier(.16,.7,.3,1), box-shadow .45s ease; }
+  .pc-svc-highlight:hover{ transform:translateY(-5px); box-shadow:0 28px 70px -22px rgba(110,63,163,0.28); }
+  /* ---- journey step hover ---- */
+  .pc-journey-step{ transition:transform .4s cubic-bezier(.16,.7,.3,1); }
+  .pc-journey-step:hover{ transform:translateY(-6px); }
+  /* ---- mobile fixes ---- */
+  @media (max-width:980px){
+    .pc-hamburger{ display:flex; }
+    .pc-explore{ display:none !important; }
+    .pc-hero-text{ padding-top:clamp(44px,8vw,64px) !important; padding-bottom:56px !important; }
+    .pc-portrait-card{ right:4px !important; }
+    .pc-cta-portrait{ max-height:66vw !important; aspect-ratio:auto !important; }
+    .pc-journey{ grid-template-columns:1fr 1fr !important; }
+    .pc-svc-item:hover,.pc-svc-highlight:hover,.pc-journey-step:hover{ transform:none; box-shadow:none; }
+  }
+  @media (max-width:560px){
+    .pc-futrender{ grid-column:auto !important; }
   }
 </style>
 </head>
@@ -75,12 +124,26 @@
         <a href="#futuro" class="navlink">Futuro</a>
       </div>
       <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" class="pc-navcta btn-dark" style="text-decoration:none; background:#2B2823; color:#F4EFE7; padding:12px 22px; border-radius:999px; font-size:13px; letter-spacing:.02em; font-weight:500; white-space:nowrap;">Falar com a Magda</a>
+      <button class="pc-hamburger" id="pc-hb" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hb"></span>
+        <span class="hb"></span>
+        <span class="hb"></span>
+      </button>
     </div>
   </nav>
+  <div class="pc-mobile-menu" id="pc-mm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <button class="mm-close" id="pc-mm-close" aria-label="Fechar menu">Fechar</button>
+    <a href="#magda" class="mm-link">A Magda</a>
+    <a href="#pires" class="mm-link">A Pires</a>
+    <a href="#solucoes" class="mm-link">Soluções</a>
+    <a href="#experiencia" class="mm-link">Experiência</a>
+    <a href="#futuro" class="mm-link">Futuro</a>
+    <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" class="mm-cta">Falar com a Magda</a>
+  </div>
 
   <!-- ============ 01 · HERO ============ -->
   <header id="top" class="pc-hero" style="position:relative; display:grid; grid-template-columns:1.04fr 0.96fr; min-height:100vh; align-items:stretch;">
-    <div style="display:flex; flex-direction:column; justify-content:center; padding:148px clamp(24px,5vw,86px) 70px;">
+    <div class="pc-hero-text" style="display:flex; flex-direction:column; justify-content:center; padding:148px clamp(24px,5vw,86px) 70px;">
       <div data-reveal style="display:flex; align-items:center; gap:15px; margin-bottom:30px;">
         <span style="width:46px; height:2px; border-radius:2px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD);"></span>
         <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Araguaína · Tocantins</span>
@@ -106,13 +169,10 @@
       <img src="assets/magda-hero.jpg" alt="Magda Pires" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:38% 28%; animation:pcBreathe 22s ease-in-out infinite alternate;">
       <div style="position:absolute; inset:0; background:linear-gradient(155deg, rgba(244,239,231,0.12), rgba(199,65,139,0.05) 55%, rgba(110,63,163,0.09)); mix-blend-mode:multiply; pointer-events:none;"></div>
       <div style="position:absolute; inset:0; box-shadow:inset 0 0 140px rgba(43,40,35,0.16); pointer-events:none;"></div>
-      <div style="position:absolute; left:30px; bottom:34px; display:flex; align-items:center; gap:12px; writing-mode:vertical-rl; transform:rotate(180deg);">
-        <span style="font-size:10.5px; letter-spacing:.4em; text-transform:uppercase; color:rgba(255,255,255,0.9); font-weight:600;">Pires · Edição 2026</span>
-      </div>
       <div style="position:absolute; right:26px; top:120px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2vw,30px); color:rgba(255,255,255,0.92); text-align:right; line-height:1.2; max-width:42%;">tranquilidade,<br>clareza<br>&amp; crescimento</div>
     </div>
 
-    <div style="position:absolute; left:50%; bottom:26px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:7px; z-index:5;">
+    <div class="pc-explore" style="position:absolute; left:50%; bottom:26px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:7px; z-index:5;">
       <span style="font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Explorar</span>
       <span style="width:1px; height:34px; background:linear-gradient(#8C857A,transparent); animation:pcDrift 2.4s ease-in-out infinite alternate;"></span>
     </div>
@@ -123,12 +183,12 @@
     <div class="pc-2col" style="display:grid; grid-template-columns:0.82fr 1.18fr; gap:clamp(40px,6vw,90px); align-items:center; max-width:1280px; margin:0 auto;">
       <div data-reveal style="position:relative;">
         <div style="position:relative; overflow:hidden; border-radius:1000px 1000px 8px 8px; aspect-ratio:3/4; background:#D9D4CC;">
-          <img src="assets/magda-portrait.jpg" alt="Magda Pires" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 22%; animation:pcBreathe 26s ease-in-out infinite alternate;">
+          <img src="assets/magda-portrait.jpg" alt="Magda Pires" loading="lazy" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 22%; animation:pcBreathe 26s ease-in-out infinite alternate;">
           <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.08)); mix-blend-mode:multiply;"></div>
         </div>
-        <div style="position:absolute; right:-10px; bottom:30px; background:#FAF6EF; padding:16px 22px; border-radius:6px; box-shadow:0 24px 60px -28px rgba(43,40,35,0.4);">
+        <div class="pc-portrait-card" style="position:absolute; right:-10px; bottom:30px; background:#FAF6EF; padding:16px 22px; border-radius:6px; box-shadow:0 24px 60px -28px rgba(43,40,35,0.4);">
           <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:24px; line-height:1;">Magda Pires</div>
-          <div style="font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-top:6px;">Contadora responsável</div>
+          <div style="font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-top:6px;">CEO</div>
         </div>
       </div>
 
@@ -149,7 +209,7 @@
         <div data-reveal data-reveal-delay="0.26" style="display:flex; flex-wrap:wrap; gap:34px; margin-top:42px; padding-top:30px; border-top:1px solid rgba(43,40,35,0.12);">
           <div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:23px;">Magda Helley Costa Pires</div>
-            <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-top:6px;">Contadora responsável</div>
+            <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-top:6px;">CEO</div>
           </div>
           <div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:23px;">CRC-TO 005688/O-7</div>
@@ -183,7 +243,7 @@
 
       <div class="pc-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,90px); align-items:center;">
         <div data-reveal style="position:relative; overflow:hidden; border-radius:8px; aspect-ratio:4/5; background:#D9D4CC;">
-          <img src="assets/magda-yellow.jpg" alt="Magda Pires" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 18%; animation:pcBreathe 28s ease-in-out infinite alternate;">
+          <img src="assets/magda-yellow.jpg" alt="Magda Pires" loading="lazy" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 18%; animation:pcBreathe 28s ease-in-out infinite alternate;">
           <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.08), rgba(199,65,139,0.06)); mix-blend-mode:multiply;"></div>
         </div>
         <div>
@@ -221,38 +281,38 @@
 
       <div class="pc-svc" style="display:grid; grid-template-columns:repeat(12,1fr); column-gap:clamp(28px,4vw,64px); row-gap:clamp(44px,5vw,72px);">
 
-        <div data-reveal style="grid-column:span 7; padding-top:30px; border-top:1px solid rgba(43,40,35,0.18);">
+        <div data-reveal class="pc-svc-item" style="grid-column:span 7; padding-top:30px; border-top:1px solid rgba(43,40,35,0.18);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:15px; background:linear-gradient(90deg,#6E3FA3,#C7418B); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;">01</div>
           <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05;">Contabilidade empresarial</h3>
           <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#56514A;">Escrituração, obrigações acessórias e relatórios gerenciais que dão visão real do negócio. Números que viram decisão.</p>
         </div>
 
-        <div data-reveal data-reveal-delay="0.06" style="grid-column:span 5; padding-top:30px; margin-top:46px; border-top:1px solid rgba(43,40,35,0.18);">
+        <div data-reveal data-reveal-delay="0.06" class="pc-svc-item" style="grid-column:span 5; padding-top:30px; margin-top:46px; border-top:1px solid rgba(43,40,35,0.18);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:15px; background:linear-gradient(90deg,#C7418B,#F0764E); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;">02</div>
           <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05;">Agronegócio</h3>
           <p style="margin:14px 0 0; max-width:360px; font-size:15.5px; line-height:1.72; color:#56514A;">Regularização e planejamento para produtores rurais e CNPJs do agro, com a especificidade que o campo exige.</p>
         </div>
 
-        <div data-reveal style="grid-column:span 5; background:#EAE4F0; border-radius:8px; padding:clamp(28px,3vw,40px);">
+        <div data-reveal class="pc-svc-highlight" style="grid-column:span 5; background:#EAE4F0; border-radius:8px; padding:clamp(28px,3vw,40px);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:15px; background:linear-gradient(90deg,#6E3FA3,#3A5FCD); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;">03</div>
           <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05;">Planejamento tributário</h3>
           <p style="margin:14px 0 0; font-size:15.5px; line-height:1.72; color:#56514A;">Escolha do regime ideal e redução legal da carga de impostos. Pagar o justo, nem um centavo a mais, dentro da lei.</p>
           <span style="display:inline-block; margin-top:22px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#6E3FA3; font-weight:600;">Frente em destaque</span>
         </div>
 
-        <div data-reveal data-reveal-delay="0.06" style="grid-column:span 7; padding-top:30px; margin-top:40px; border-top:1px solid rgba(43,40,35,0.18);">
+        <div data-reveal data-reveal-delay="0.06" class="pc-svc-item" style="grid-column:span 7; padding-top:30px; margin-top:40px; border-top:1px solid rgba(43,40,35,0.18);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:15px; background:linear-gradient(90deg,#3A5FCD,#36AEC6); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;">04</div>
           <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05;">Departamento pessoal</h3>
           <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#56514A;">Folha, admissões, rescisões e obrigações trabalhistas conduzidas com cuidado. Sua equipe segura e em conformidade.</p>
         </div>
 
-        <div data-reveal style="grid-column:span 6; padding-top:30px; border-top:1px solid rgba(43,40,35,0.18);">
+        <div data-reveal class="pc-svc-item" style="grid-column:span 6; padding-top:30px; border-top:1px solid rgba(43,40,35,0.18);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:15px; background:linear-gradient(90deg,#C7418B,#6E3FA3); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;">05</div>
           <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05;">IRPF</h3>
           <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#56514A;">Declaração do imposto de renda pessoa física com segurança e estratégia, sem sustos com o Leão.</p>
         </div>
 
-        <div data-reveal data-reveal-delay="0.06" style="grid-column:span 6; padding-top:30px; border-top:1px solid rgba(43,40,35,0.18);">
+        <div data-reveal data-reveal-delay="0.06" class="pc-svc-item" style="grid-column:span 6; padding-top:30px; border-top:1px solid rgba(43,40,35,0.18);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:15px; background:linear-gradient(90deg,#F0764E,#C7418B); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:14px;">06</div>
           <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3vw,40px); line-height:1.05;">Consultoria financeira</h3>
           <p style="margin:14px 0 0; max-width:430px; font-size:15.5px; line-height:1.72; color:#56514A;">Organização patrimonial e análise para a melhor tomada de decisão. Clareza para crescer com base sólida.</p>
@@ -276,7 +336,7 @@
       <div style="position:relative;">
         <div class="pc-journey-line" style="position:absolute; top:8px; left:0; right:0; height:1px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6);"></div>
         <div class="pc-journey" style="display:grid; grid-template-columns:repeat(6,1fr); gap:30px;">
-          <div data-reveal style="position:relative;">
+          <div data-reveal class="pc-journey-step" style="position:relative;">
             <span style="display:block; width:15px; height:15px; border-radius:50%; background:#6E3FA3; box-shadow:0 0 0 4px #2B2823; margin-bottom:26px;"></span>
             <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#A79E90; margin-bottom:8px;">Etapa 01</div>
             <h3 style="margin:0 0 10px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px;">Diagnóstico</h3>
@@ -338,21 +398,21 @@
         </div>
 
         <div data-reveal data-reveal-delay="0.1" class="pc-futmosaic" style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:16px;">
-          <div style="grid-column:span 2; position:relative; aspect-ratio:16/10; border-radius:8px; overflow:hidden; background:#D9D4CC;">
-            <img src="assets/render-sede.jpg" alt="Projeto da futura sede da Pires Contabilidade" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 56%;">
+          <div class="pc-futrender" style="grid-column:span 2; position:relative; aspect-ratio:16/10; border-radius:8px; overflow:hidden; background:#D9D4CC;">
+            <img src="assets/render-sede.jpg" alt="Projeto da futura sede da Pires Contabilidade" loading="lazy" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 56%;">
             <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
             <div style="position:absolute; inset:0; box-shadow:inset 0 0 90px rgba(43,40,35,0.14); pointer-events:none;"></div>
             <span style="position:absolute; left:18px; bottom:15px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:rgba(255,255,255,0.96); text-shadow:0 1px 12px rgba(43,40,35,0.5);">A visão pronta</span>
             <span style="position:absolute; right:16px; top:14px; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.85); font-weight:600;">Render · futura sede</span>
           </div>
           <div style="position:relative; aspect-ratio:1/1; border-radius:8px; overflow:hidden; background:#D9D4CC;">
-            <img src="assets/obra.jpg" alt="Obra da nova sede em andamento" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 52%;">
+            <img src="assets/obra.jpg" alt="Obra da nova sede em andamento" loading="lazy" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 52%;">
             <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.16), rgba(110,63,163,0.10)); mix-blend-mode:multiply;"></div>
             <div style="position:absolute; inset:0; box-shadow:inset 0 0 80px rgba(43,40,35,0.2); pointer-events:none;"></div>
             <span style="position:absolute; left:14px; bottom:12px; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,0.92); font-weight:600;">Obra · hoje</span>
           </div>
           <div style="position:relative; aspect-ratio:1/1; border-radius:8px; overflow:hidden; background:#D9D4CC;">
-            <img src="assets/detalhe.jpg" alt="Detalhe da fachada com a marca Pires Contabilidade" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 46%;">
+            <img src="assets/detalhe.jpg" alt="Detalhe da fachada com a marca Pires Contabilidade" loading="lazy" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 46%;">
             <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
             <span style="position:absolute; left:14px; bottom:12px; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,0.9); font-weight:600;">Detalhe · fachada</span>
           </div>
@@ -424,8 +484,8 @@
           </div>
         </div>
       </div>
-      <div data-reveal data-reveal-delay="0.12" style="position:relative; overflow:hidden; border-radius:1000px 1000px 8px 8px; aspect-ratio:3/4; background:#D9D4CC;">
-        <img src="assets/magda-smile.jpg" alt="Magda Pires" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 16%; animation:pcBreathe 26s ease-in-out infinite alternate;">
+      <div data-reveal data-reveal-delay="0.12" class="pc-cta-portrait" style="position:relative; overflow:hidden; border-radius:1000px 1000px 8px 8px; aspect-ratio:3/4; background:#D9D4CC;">
+        <img src="assets/magda-smile.jpg" alt="Magda Pires" loading="lazy" class="pc-photo pc-breathe" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 16%; animation:pcBreathe 26s ease-in-out infinite alternate;">
         <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(199,65,139,0.06)); mix-blend-mode:multiply;"></div>
       </div>
     </div>
@@ -462,7 +522,7 @@
       </div>
       <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-top:26px; font-size:12.5px; color:#8C857A;">
         <span>© 2026 Pires Contabilidade. Todos os direitos reservados.</span>
-        <span style="letter-spacing:.06em;">Assessoria e Consultoria Contábil</span>
+        <span style="letter-spacing:.06em;">Assessoria e Consultoria Contábil · LGPD: dados tratados com confidencialidade</span>
       </div>
     </div>
   </footer>
@@ -517,6 +577,27 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    // scroll progress bar
+    var prog = document.createElement('div');
+    prog.id = 'pc-progress';
+    document.body.appendChild(prog);
+    window.addEventListener('scroll', function(){
+      var top = window.scrollY;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (top / h * 100) : 0) + '%';
+    }, { passive: true });
+
+    // hamburger / mobile menu
+    var hb = document.getElementById('pc-hb');
+    var mm = document.getElementById('pc-mm');
+    var mmClose = document.getElementById('pc-mm-close');
+    function openMenu(){ if(!mm||!hb) return; mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu(){ if(!mm||!hb) return; mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    if(hb){ hb.addEventListener('click', openMenu); }
+    if(mmClose){ mmClose.addEventListener('click', closeMenu); }
+    if(mm){ mm.querySelectorAll('.mm-link,.mm-cta').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
   })();
 </script>
 </body>
