@@ -59,12 +59,10 @@
     .pc-journey{ grid-template-columns:1fr !important; }
     .pc-journey-line{ display:none !important; }
     .pc-fut{ grid-template-columns:1fr !important; }
-    .pc-futmosaic{ grid-template-columns:1fr 1fr !important; }
     .pc-auth{ grid-template-columns:1fr 1fr !important; }
     .pc-navcta{ display:none !important; }
   }
   @media (max-width:560px){
-    .pc-futmosaic{ grid-template-columns:1fr !important; }
     .pc-journey{ grid-template-columns:1fr !important; }
     .pc-auth{ grid-template-columns:1fr !important; }
     .pc-cta-portrait{ max-height:82vw !important; aspect-ratio:auto !important; }
@@ -100,8 +98,24 @@
     .pc-journey{ grid-template-columns:1fr 1fr !important; }
     .pc-svc-item:hover,.pc-svc-highlight:hover,.pc-journey-step:hover{ transform:none; box-shadow:none; }
   }
+  /* ---- futuro slider ---- */
+  .pc-slider{ position:relative; overflow:hidden; border-radius:8px; aspect-ratio:16/10; background:#D9D4CC; }
+  .pc-slider-track{ display:flex; height:100%; width:400%; transition:transform .65s cubic-bezier(.16,.7,.3,1); }
+  .pc-slide{ position:relative; flex:0 0 25%; height:100%; }
+  .pc-slide img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .pc-slider-caption{ position:absolute; left:22px; bottom:22px; z-index:2; display:flex; flex-direction:column; gap:6px; }
+  .pc-slider-label{ font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.88); font-weight:600; text-shadow:0 1px 8px rgba(43,40,35,0.4); }
+  .pc-slider-title{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(19px,2vw,25px); color:rgba(255,255,255,0.97); text-shadow:0 1px 14px rgba(43,40,35,0.55); }
+  .pc-slider-btn{ position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,0.45); background:rgba(43,40,35,0.32); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); color:#F4EFE7; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .3s ease, transform .3s ease; z-index:3; }
+  .pc-slider-btn:hover{ background:rgba(43,40,35,0.52); }
+  .pc-slider-prev{ left:16px; }
+  .pc-slider-next{ right:16px; }
+  .pc-slider-dots{ position:absolute; right:18px; bottom:20px; display:flex; gap:7px; z-index:3; }
+  .pc-slider-dot{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.45); cursor:pointer; transition:background .3s ease, width .3s ease; border:none; padding:0; }
+  .pc-slider-dot.active{ background:#F4EFE7; width:20px; border-radius:4px; }
   @media (max-width:560px){
-    .pc-futrender{ grid-column:auto !important; }
+    .pc-slider-btn{ width:32px; height:32px; }
+    .pc-slider-title{ font-size:18px; }
   }
 </style>
 </head>
@@ -400,24 +414,53 @@
           </p>
         </div>
 
-        <div data-reveal data-reveal-delay="0.1" class="pc-futmosaic" style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:16px;">
-          <div class="pc-futrender" style="grid-column:span 2; position:relative; aspect-ratio:16/10; border-radius:8px; overflow:hidden; background:#D9D4CC;">
-            <img src="assets/render-sede.jpg" alt="Projeto da futura sede da Pires Contabilidade" loading="lazy" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 56%;">
-            <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
-            <div style="position:absolute; inset:0; box-shadow:inset 0 0 90px rgba(43,40,35,0.14); pointer-events:none;"></div>
-            <span style="position:absolute; left:18px; bottom:15px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:rgba(255,255,255,0.96); text-shadow:0 1px 12px rgba(43,40,35,0.5);">A visão pronta</span>
-            <span style="position:absolute; right:16px; top:14px; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.85); font-weight:600;">Render · futura sede</span>
+        <div data-reveal data-reveal-delay="0.1" class="pc-slider" id="pc-futuro-slider">
+          <div class="pc-slider-track">
+            <div class="pc-slide">
+              <img src="assets/render-sede.jpg" alt="Projeto da futura sede da Pires Contabilidade" loading="lazy" class="pc-arch" style="object-position:50% 56%;">
+              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
+              <div style="position:absolute; inset:0; box-shadow:inset 0 0 90px rgba(43,40,35,0.14); pointer-events:none;"></div>
+              <div class="pc-slider-caption">
+                <span class="pc-slider-label">Render · futura sede</span>
+                <span class="pc-slider-title">A visão pronta</span>
+              </div>
+            </div>
+            <div class="pc-slide">
+              <img src="assets/obra.jpg" alt="Obra da nova sede, estrutura inicial" loading="lazy" class="pc-arch" style="object-position:50% 52%;">
+              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.14), rgba(110,63,163,0.09)); mix-blend-mode:multiply;"></div>
+              <div class="pc-slider-caption">
+                <span class="pc-slider-label">Obra · estrutura inicial</span>
+                <span class="pc-slider-title">Onde tudo começou</span>
+              </div>
+            </div>
+            <div class="pc-slide">
+              <img src="assets/obra-atual.jpg" alt="Obra da nova sede, avanço da construção" loading="lazy" class="pc-arch" style="object-position:50% 48%;">
+              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.12), rgba(110,63,163,0.08)); mix-blend-mode:multiply;"></div>
+              <div class="pc-slider-caption">
+                <span class="pc-slider-label">Obra · acompanhe a evolução</span>
+                <span class="pc-slider-title">A obra avança</span>
+              </div>
+            </div>
+            <div class="pc-slide">
+              <img src="assets/detalhe.jpg" alt="Detalhe da fachada com a marca Pires Contabilidade" loading="lazy" class="pc-arch" style="object-position:50% 46%;">
+              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
+              <div class="pc-slider-caption">
+                <span class="pc-slider-label">Detalhe · fachada</span>
+                <span class="pc-slider-title">A marca na arquitetura</span>
+              </div>
+            </div>
           </div>
-          <div style="position:relative; aspect-ratio:1/1; border-radius:8px; overflow:hidden; background:#D9D4CC;">
-            <img src="assets/obra.jpg" alt="Obra da nova sede em andamento" loading="lazy" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 52%;">
-            <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.16), rgba(110,63,163,0.10)); mix-blend-mode:multiply;"></div>
-            <div style="position:absolute; inset:0; box-shadow:inset 0 0 80px rgba(43,40,35,0.2); pointer-events:none;"></div>
-            <span style="position:absolute; left:14px; bottom:12px; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,0.92); font-weight:600;">Obra · hoje</span>
-          </div>
-          <div style="position:relative; aspect-ratio:1/1; border-radius:8px; overflow:hidden; background:#D9D4CC;">
-            <img src="assets/detalhe.jpg" alt="Detalhe da fachada com a marca Pires Contabilidade" loading="lazy" class="pc-arch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 46%;">
-            <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
-            <span style="position:absolute; left:14px; bottom:12px; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,0.9); font-weight:600;">Detalhe · fachada</span>
+          <button class="pc-slider-btn pc-slider-prev" aria-label="Imagem anterior" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="pc-slider-btn pc-slider-next" aria-label="Próxima imagem" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pc-slider-dots">
+            <button class="pc-slider-dot active" type="button" aria-label="Slide 1"></button>
+            <button class="pc-slider-dot" type="button" aria-label="Slide 2"></button>
+            <button class="pc-slider-dot" type="button" aria-label="Slide 3"></button>
+            <button class="pc-slider-dot" type="button" aria-label="Slide 4"></button>
           </div>
         </div>
       </div>
@@ -601,6 +644,45 @@
     if(mmClose){ mmClose.addEventListener('click', closeMenu); }
     if(mm){ mm.querySelectorAll('.mm-link,.mm-cta').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
+
+    // futuro slider
+    var slider = document.getElementById('pc-futuro-slider');
+    if (slider) {
+      var track = slider.querySelector('.pc-slider-track');
+      var slides = slider.querySelectorAll('.pc-slide');
+      var dots = slider.querySelectorAll('.pc-slider-dot');
+      var prevBtn = slider.querySelector('.pc-slider-prev');
+      var nextBtn = slider.querySelector('.pc-slider-next');
+      var total = slides.length;
+      var idx = 0;
+      var auto = null;
+
+      function goTo(i){
+        idx = (i + total) % total;
+        track.style.transform = 'translateX(-' + (idx * (100 / total)) + '%)';
+        dots.forEach(function(d, di){ d.classList.toggle('active', di === idx); });
+      }
+      function startAuto(){ auto = setInterval(function(){ goTo(idx + 1); }, 5500); }
+      function stopAuto(){ if (auto) { clearInterval(auto); auto = null; } }
+
+      if (prevBtn) prevBtn.addEventListener('click', function(){ goTo(idx - 1); stopAuto(); startAuto(); });
+      if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(idx + 1); stopAuto(); startAuto(); });
+      dots.forEach(function(d, di){ d.addEventListener('click', function(){ goTo(di); stopAuto(); startAuto(); }); });
+
+      var startX = 0, deltaX = 0, dragging = false;
+      track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; dragging = true; stopAuto(); }, { passive:true });
+      track.addEventListener('touchmove', function(e){ if (!dragging) return; deltaX = e.touches[0].clientX - startX; }, { passive:true });
+      track.addEventListener('touchend', function(){
+        if (Math.abs(deltaX) > 40) { goTo(deltaX < 0 ? idx + 1 : idx - 1); }
+        dragging = false; deltaX = 0; startAuto();
+      });
+
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
+
+      goTo(0);
+      startAuto();
+    }
   })();
 </script>
 </body>
