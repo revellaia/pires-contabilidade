@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Magda Pires · Pires Contabilidade · Araguaína-TO</title>
 <meta name="description" content="Contabilidade estratégica para quem busca clareza, segurança e crescimento. Magda Helley Costa Pires, CRC-TO 005688/O-7, Araguaína, Tocantins.">
+<link rel="canonical" href="https://pirescontabilidadess.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Magda Pires · Pires Contabilidade · Araguaína-TO">
 <meta property="og:description" content="Contabilidade estratégica com clareza, segurança e crescimento. Araguaína, Tocantins.">
-<meta property="og:image" content="https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg">
+<meta property="og:url" content="https://pirescontabilidadess.com.br/">
+<meta property="og:image" content="https://pirescontabilidadess.com.br/assets/magda-hero.jpg">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Magda Pires · Pires Contabilidade">
 <meta name="twitter:description" content="Contabilidade estratégica com clareza, segurança e crescimento. Araguaína-TO.">
-<meta name="twitter:image" content="https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg">
+<meta name="twitter:image" content="https://pirescontabilidadess.com.br/assets/magda-hero.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AccountingService","name":"Pires Contabilidade","url":"https://revellaia.github.io/pires-contabilidade/","logo":"https://revellaia.github.io/pires-contabilidade/assets/logo.png","image":"https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg","description":"Contabilidade estratégica para quem busca clareza, segurança e crescimento.","telephone":"+55-63-99214-1495","email":"contato@pirescontabilidadeto.com.br","areaServed":"BR","address":{"@type":"PostalAddress","streetAddress":"Rua dos Eletricistas, 138, Qd. TF, Lote 01","addressLocality":"Araguaína","addressRegion":"TO","addressCountry":"BR"},"founder":{"@type":"Person","name":"Magda Helley Costa Pires","jobTitle":"CEO","hasCredential":"CRC-TO 005688/O-7"},"sameAs":["https://www.instagram.com/magda.pirescontabilidade.to"]}
+{"@context":"https://schema.org","@type":"AccountingService","name":"Pires Contabilidade","url":"https://pirescontabilidadess.com.br/","logo":"https://pirescontabilidadess.com.br/assets/logo.png","image":"https://pirescontabilidadess.com.br/assets/magda-hero.jpg","description":"Contabilidade estratégica para quem busca clareza, segurança e crescimento.","telephone":"+55-63-99214-1495","email":"contato@pirescontabilidadeto.com.br","areaServed":"BR","address":{"@type":"PostalAddress","streetAddress":"Rua dos Eletricistas, 138, Qd. TF, Lote 01","addressLocality":"Araguaína","addressRegion":"TO","addressCountry":"BR"},"founder":{"@type":"Person","name":"Magda Helley Costa Pires","jobTitle":"CEO","hasCredential":"CRC-TO 005688/O-7"},"sameAs":["https://www.instagram.com/magda.pirescontabilidade.to"]}
 </script>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -54,6 +56,7 @@
     .pc-hero{ grid-template-columns:1fr !important; }
     .pc-hero-img{ min-height:62vh !important; order:-1; }
     .pc-2col{ grid-template-columns:1fr !important; }
+    .pc-footer-grid{ grid-template-columns:1fr !important; }
     .pc-svc{ grid-template-columns:1fr !important; }
     .pc-svc > *{ grid-column:auto !important; margin-top:0 !important; }
     .pc-journey{ grid-template-columns:1fr !important; }
@@ -61,11 +64,19 @@
     .pc-fut{ grid-template-columns:1fr !important; }
     .pc-auth{ grid-template-columns:1fr 1fr !important; }
     .pc-navcta{ display:none !important; }
+    .pc-agro-grid{ grid-template-columns:1fr 1fr !important; }
+    .pc-flow{ grid-template-columns:1fr 1fr 1fr !important; }
+    .pc-tools-grid{ grid-template-columns:1fr 1fr !important; }
+    .pc-plans-grid{ grid-template-columns:1fr 1fr !important; }
   }
   @media (max-width:560px){
     .pc-journey{ grid-template-columns:1fr !important; }
     .pc-auth{ grid-template-columns:1fr !important; }
     .pc-cta-portrait{ max-height:82vw !important; aspect-ratio:auto !important; }
+    .pc-agro-grid{ grid-template-columns:1fr !important; }
+    .pc-flow{ grid-template-columns:1fr 1fr !important; }
+    .pc-tools-grid{ grid-template-columns:1fr !important; }
+    .pc-plans-grid{ grid-template-columns:1fr !important; }
   }
   /* ---- hamburger + mobile menu ---- */
   .pc-hamburger{ display:none; background:none; border:none; cursor:pointer; padding:8px 0; flex-direction:column; gap:6px; }
@@ -78,7 +89,7 @@
   .pc-mobile-menu .mm-accordion.open .mm-acc-caret{ transform:rotate(45deg); }
   .pc-mobile-menu .mm-acc-panel{ max-height:0; overflow:hidden; transition:max-height .45s cubic-bezier(.16,.7,.3,1); display:flex; flex-direction:column; }
   .pc-mobile-menu .mm-accordion.open .mm-acc-panel{ max-height:640px; }
-  .pc-mobile-menu .mm-sub{ text-decoration:none; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; color:#56514A; padding:12px 4px 12px 16px; border-left:2px solid rgba(110,63,163,0.25); }
+  .pc-mobile-menu .mm-sub{ text-decoration:none; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; color:#56514A; padding:12px 4px 12px 16px; border-left:2px solid rgba(110,63,163,0.25); background:none; border-top:none; border-right:none; border-bottom:none; width:100%; text-align:left; display:block; cursor:pointer; }
   .pc-mobile-menu .mm-cta{ margin-top:24px; text-decoration:none; background:#2B2823; color:#F4EFE7 !important; padding:17px 34px; border-radius:999px; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; letter-spacing:.02em; font-weight:500; border:none; cursor:pointer; text-align:center; }
   .pc-mobile-menu .mm-close{ position:absolute; top:22px; right:clamp(22px,5vw,72px); background:none; border:none; cursor:pointer; font-family:'Hanken Grotesk',sans-serif; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; padding:10px; }
   /* ---- desktop dropdowns ---- */
@@ -90,7 +101,7 @@
   .pc-dropdown-panel-sm{ min-width:420px; }
   .pc-dd-col{ display:flex; flex-direction:column; gap:2px; min-width:160px; }
   .pc-dd-heading{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:10px; }
-  .pc-dd-link{ text-decoration:none; color:#2B2823; font-size:14px; padding:8px 0; transition:color .25s ease, padding-left .25s ease; cursor:pointer; background:none; border:none; text-align:left; font-family:'Hanken Grotesk',sans-serif; display:block; }
+  .pc-dd-link{ text-decoration:none; color:#2B2823; font-size:14px; padding:8px 0; transition:color .25s ease, padding-left .25s ease; cursor:pointer; background:none; border:none; text-align:left; font-family:'Hanken Grotesk',sans-serif; display:block; width:100%; }
   .pc-dd-link:hover{ color:#6E3FA3; padding-left:4px; }
   @media (max-width:1180px){ .pc-dropdown-panel{ min-width:480px; gap:26px; } }
   /* email overflow */
@@ -106,6 +117,11 @@
   /* ---- journey step hover ---- */
   .pc-journey-step{ transition:transform .4s cubic-bezier(.16,.7,.3,1); }
   .pc-journey-step:hover{ transform:translateY(-6px); }
+  /* ---- service chips (todos os atendimentos) ---- */
+  .pc-chip{ display:inline-flex; align-items:center; text-decoration:none; font-family:'Hanken Grotesk',sans-serif; font-size:13.5px; color:#2B2823; background:#FAF6EF; border:1px solid rgba(43,40,35,0.14); padding:11px 18px; border-radius:999px; cursor:pointer; transition:background .25s ease, border-color .25s ease, transform .25s ease; }
+  .pc-chip:hover{ background:#E4D8F0; border-color:rgba(110,63,163,0.3); transform:translateY(-2px); }
+  .pc-chip-accent{ background:#2B2823; color:#F4EFE7; border-color:#2B2823; }
+  .pc-chip-accent:hover{ background:#3A352E; color:#F4EFE7; }
   /* ---- mobile fixes ---- */
   @media (max-width:980px){
     .pc-hamburger{ display:flex; }
@@ -116,25 +132,20 @@
     .pc-journey{ grid-template-columns:1fr 1fr !important; }
     .pc-svc-item:hover,.pc-svc-highlight:hover,.pc-journey-step:hover{ transform:none; box-shadow:none; }
   }
-  /* ---- futuro slider ---- */
-  .pc-slider{ position:relative; overflow:hidden; border-radius:8px; aspect-ratio:16/10; background:#D9D4CC; }
-  .pc-slider-track{ display:flex; height:100%; width:400%; transition:transform .65s cubic-bezier(.16,.7,.3,1); }
-  .pc-slide{ position:relative; flex:0 0 25%; height:100%; }
-  .pc-slide img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .pc-slider-caption{ position:absolute; left:22px; bottom:22px; z-index:2; display:flex; flex-direction:column; gap:6px; }
-  .pc-slider-label{ font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.88); font-weight:600; text-shadow:0 1px 8px rgba(43,40,35,0.4); }
-  .pc-slider-title{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(19px,2vw,25px); color:rgba(255,255,255,0.97); text-shadow:0 1px 14px rgba(43,40,35,0.55); }
-  .pc-slider-btn{ position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,0.45); background:rgba(43,40,35,0.32); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); color:#F4EFE7; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .3s ease, transform .3s ease; z-index:3; }
-  .pc-slider-btn:hover{ background:rgba(43,40,35,0.52); }
-  .pc-slider-prev{ left:16px; }
-  .pc-slider-next{ right:16px; }
-  .pc-slider-dots{ position:absolute; right:18px; bottom:20px; display:flex; gap:7px; z-index:3; }
-  .pc-slider-dot{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.45); cursor:pointer; transition:background .3s ease, width .3s ease; border:none; padding:0; }
-  .pc-slider-dot.active{ background:#F4EFE7; width:20px; border-radius:4px; }
-  @media (max-width:560px){
-    .pc-slider-btn{ width:32px; height:32px; }
-    .pc-slider-title{ font-size:18px; }
-  }
+  /* ---- futuro: slider antes/depois ---- */
+  .pc-ba{ position:relative; overflow:hidden; border-radius:8px; aspect-ratio:16/10; background:#D9D4CC; user-select:none; -webkit-user-select:none; }
+  .pc-ba-depois, .pc-ba-antes{ position:absolute; inset:0; }
+  .pc-ba-depois img, .pc-ba-antes img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+  .pc-ba-antes{ clip-path:inset(0 50% 0 0); will-change:clip-path; }
+  .pc-ba-label{ position:absolute; top:16px; z-index:2; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.92); font-weight:600; text-shadow:0 1px 8px rgba(43,40,35,0.45); pointer-events:none; }
+  .pc-ba-label-left{ left:18px; }
+  .pc-ba-label-right{ right:18px; }
+  .pc-ba-divider{ position:absolute; top:0; bottom:0; left:50%; width:2px; background:#F4EFE7; transform:translateX(-1px); pointer-events:none; box-shadow:0 0 16px rgba(43,40,35,0.4); z-index:3; }
+  .pc-ba-handle{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:50%; background:#F4EFE7; box-shadow:0 12px 30px -8px rgba(43,40,35,0.45); display:flex; align-items:center; justify-content:center; color:#2B2823; }
+  .pc-ba-range{ position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; -webkit-appearance:none; appearance:none; z-index:4; }
+  .pc-ba-range::-webkit-slider-thumb{ -webkit-appearance:none; width:46px; height:46px; }
+  .pc-ba-range::-moz-range-thumb{ width:46px; height:46px; opacity:0; border:none; }
+  .pc-ba-range:focus-visible ~ .pc-ba-divider .pc-ba-handle{ outline:2px solid #6E3FA3; outline-offset:3px; }
   /* ---- modal: iniciar atendimento ---- */
   .pc-modal-overlay{ position:fixed; inset:0; z-index:80; background:rgba(43,40,35,0.55); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .35s ease, visibility .35s; }
   .pc-modal-overlay.open{ opacity:1; visibility:visible; pointer-events:auto; }
@@ -178,25 +189,25 @@
           <div class="pc-dropdown-panel" id="dd-servicos">
             <div class="pc-dd-col">
               <div class="pc-dd-heading">Comece por aqui</div>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Abrir uma empresa">Abra sua empresa</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Trocar de contador">Troque de contador</a>
-              <a href="#solucoes" class="pc-dd-link js-close-dd">Ver planos</a>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Abrir uma empresa">Abra sua empresa</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Trocar de contador">Troque de contador</button>
+              <a href="#planos" class="pc-dd-link js-close-dd">Ver planos</a>
             </div>
             <div class="pc-dd-col">
               <div class="pc-dd-heading">Serviços</div>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Planejamento Tributário">Planejamento Tributário</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="IRPF">IRPF</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</a>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</button>
+              <a href="#recuperacao-tributaria" class="pc-dd-link js-close-dd">Recuperação Tributária</a>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Planejamento Tributário">Planejamento Tributário</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="IRPF">IRPF</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</button>
             </div>
             <div class="pc-dd-col">
               <div class="pc-dd-heading">&nbsp;</div>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Transformar MEI em ME">Transformar MEI para ME</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Abertura de MEI">Abertura de MEI</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</a>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Transformar MEI em ME">Transformar MEI para ME</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Abertura de MEI">Abertura de MEI</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</button>
             </div>
           </div>
         </div>
@@ -205,17 +216,17 @@
           <div class="pc-dropdown-panel pc-dropdown-panel-sm" id="dd-solucoes">
             <div class="pc-dd-col">
               <a href="#solucoes" class="pc-dd-link js-close-dd" style="color:#6E3FA3;">Ver todas as soluções</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Agronegócio">Agronegócio</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Produtor Rural">Produtor Rural</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Reforma Tributária">Reforma Tributária</a>
+              <a href="#recuperacao-tributaria" class="pc-dd-link js-close-dd">Recuperação Tributária</a>
+              <a href="#produtor-rural" class="pc-dd-link js-close-dd">Agronegócio</a>
+              <a href="#produtor-rural" class="pc-dd-link js-close-dd">Produtor Rural</a>
+              <a href="#reforma-tributaria" class="pc-dd-link js-close-dd">Reforma Tributária</a>
             </div>
             <div class="pc-dd-col">
-              <a href="#" class="pc-dd-link js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="IRPF">IRPF</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Consultoria Financeira">Consultoria Financeira</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Holding">Holding</a>
-              <a href="#" class="pc-dd-link js-open-form" data-service="Outro atendimento">Contabilidade Empresarial</a>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="IRPF">IRPF</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Consultoria Financeira">Consultoria Financeira</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Holding">Holding</button>
+              <button type="button" class="pc-dd-link js-open-form" data-service="Outro atendimento">Contabilidade Empresarial</button>
             </div>
           </div>
         </div>
@@ -239,28 +250,28 @@
       <div class="mm-accordion">
         <button type="button" class="mm-link mm-acc-trigger" data-acc="servicos">Serviços <span class="mm-acc-caret">+</span></button>
         <div class="mm-acc-panel" id="acc-servicos">
-          <a href="#" class="mm-sub js-open-form" data-service="Abrir uma empresa">Abra sua empresa</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Trocar de contador">Troque de contador</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Planejamento Tributário">Planejamento Tributário</a>
-          <a href="#" class="mm-sub js-open-form" data-service="IRPF">IRPF</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Abertura de MEI">Abertura de MEI</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</a>
+          <button type="button" class="mm-sub js-open-form" data-service="Abrir uma empresa">Abra sua empresa</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Trocar de contador">Troque de contador</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</button>
+          <a href="#recuperacao-tributaria" class="mm-sub">Recuperação Tributária</a>
+          <button type="button" class="mm-sub js-open-form" data-service="Planejamento Tributário">Planejamento Tributário</button>
+          <button type="button" class="mm-sub js-open-form" data-service="IRPF">IRPF</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Abertura de MEI">Abertura de MEI</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</button>
         </div>
       </div>
       <div class="mm-accordion">
         <button type="button" class="mm-link mm-acc-trigger" data-acc="solucoes">Soluções <span class="mm-acc-caret">+</span></button>
         <div class="mm-acc-panel" id="acc-solucoes">
-          <a href="#" class="mm-sub js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Agronegócio">Agronegócio</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Produtor Rural">Produtor Rural</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Reforma Tributária">Reforma Tributária</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Consultoria Financeira">Consultoria Financeira</a>
-          <a href="#" class="mm-sub js-open-form" data-service="Holding">Holding</a>
+          <a href="#recuperacao-tributaria" class="mm-sub">Recuperação Tributária</a>
+          <a href="#produtor-rural" class="mm-sub">Agronegócio</a>
+          <a href="#produtor-rural" class="mm-sub">Produtor Rural</a>
+          <a href="#reforma-tributaria" class="mm-sub">Reforma Tributária</a>
+          <button type="button" class="mm-sub js-open-form" data-service="Consultoria Financeira">Consultoria Financeira</button>
+          <button type="button" class="mm-sub js-open-form" data-service="Holding">Holding</button>
         </div>
       </div>
       <a href="#experiencia" class="mm-link">Experiência</a>
@@ -283,15 +294,15 @@
       <form id="pc-lead-form" class="pc-modal-form" novalidate>
         <label class="pc-field">
           <span class="pc-field-label">Nome completo *</span>
-          <input type="text" id="pc-f-nome" autocomplete="name" placeholder="Seu nome completo">
+          <input type="text" id="pc-f-nome" name="nome" autocomplete="name" required aria-required="true" placeholder="Seu nome completo">
         </label>
         <label class="pc-field">
           <span class="pc-field-label">Telefone / WhatsApp com DDD *</span>
-          <input type="tel" id="pc-f-telefone" autocomplete="tel" placeholder="(63) 9 9999-9999">
+          <input type="tel" id="pc-f-telefone" name="telefone" autocomplete="tel" required aria-required="true" minlength="14" placeholder="(63) 9 9999-9999">
         </label>
         <label class="pc-field">
           <span class="pc-field-label">Qual serviço deseja? *</span>
-          <select id="pc-f-servico">
+          <select id="pc-f-servico" name="servico" required aria-required="true">
             <option value="" disabled selected>Selecione um serviço</option>
             <option value="Abrir uma empresa">Abrir uma empresa</option>
             <option value="Trocar de contador">Trocar de contador</option>
@@ -315,7 +326,7 @@
         </label>
         <label class="pc-field">
           <span class="pc-field-label">E-mail (opcional)</span>
-          <input type="email" id="pc-f-email" autocomplete="email" placeholder="seu@email.com">
+          <input type="email" id="pc-f-email" name="email" autocomplete="email" placeholder="seu@email.com">
         </label>
         <button type="submit" class="pc-field-submit">Continuar no WhatsApp</button>
         <p class="pc-field-note">Seus dados não são enviados a nenhum servidor. Ao continuar, abrimos uma conversa direta no WhatsApp da Pires Contabilidade.</p>
@@ -501,14 +512,287 @@
         </div>
 
       </div>
+
+      <div data-reveal data-reveal-delay="0.1" style="margin-top:clamp(56px,7vw,84px); padding-top:clamp(40px,5vw,56px); border-top:1px solid rgba(43,40,35,0.14);">
+        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:22px;">Todos os atendimentos</div>
+        <div style="display:flex; flex-wrap:wrap; gap:11px;">
+          <a href="#recuperacao-tributaria" class="pc-chip">Recuperação Tributária</a>
+          <a href="#produtor-rural" class="pc-chip">Agronegócio</a>
+          <a href="#produtor-rural" class="pc-chip">Produtor Rural</a>
+          <a href="#produtor-rural" class="pc-chip">Reforma Tributária</a>
+          <button type="button" class="pc-chip js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</button>
+          <button type="button" class="pc-chip js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</button>
+          <button type="button" class="pc-chip js-open-form" data-service="Transformar MEI em ME">Transformar MEI para ME</button>
+          <button type="button" class="pc-chip js-open-form" data-service="Abertura de MEI">Abertura de MEI</button>
+          <button type="button" class="pc-chip js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</button>
+          <button type="button" class="pc-chip js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</button>
+          <button type="button" class="pc-chip js-open-form" data-service="Holding">Holding</button>
+          <a href="#planos" class="pc-chip pc-chip-accent">Ver todos os planos</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 05 · EXPERIÊNCIA DO CLIENTE ============ -->
+  <!-- ============ 05 · RECUPERAÇÃO TRIBUTÁRIA ============ -->
+  <section id="recuperacao-tributaria" style="scroll-margin-top:90px; background:#EFE7DA; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="pc-2col" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(40px,6vw,90px); align-items:center;">
+        <div>
+          <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#3A5FCD;">05</span>
+            <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Frente em destaque</span>
+          </div>
+          <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,60px); line-height:1.04; letter-spacing:-0.012em;">
+            Recuperação <span style="font-style:italic;">Tributária.</span>
+          </h2>
+          <p data-reveal data-reveal-delay="0.14" style="margin:28px 0 0; max-width:520px; font-size:17px; line-height:1.78; color:#56514A;">
+            Análise especializada para identificar oportunidades de recuperação de valores pagos indevidamente ou a maior, conforme a legislação aplicável e o perfil fiscal do cliente.
+          </p>
+          <p data-reveal data-reveal-delay="0.2" style="margin:18px 0 0; max-width:520px; font-size:15.5px; line-height:1.74; color:#6A645B;">
+            A Pires conta com parceria estratégica com a <strong>Arte Fiscal</strong> para apoiar análises de recuperação tributária com mais segurança e profundidade técnica.
+          </p>
+          <div data-reveal data-reveal-delay="0.26" style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:36px;">
+            <button type="button" class="btn-dark js-open-form" data-service="Recuperação Tributária" style="border:none; cursor:pointer; text-decoration:none; background:#2B2823; color:#F4EFE7; padding:17px 30px; border-radius:999px; font-size:14.5px; letter-spacing:.02em; font-weight:500; font-family:'Hanken Grotesk',sans-serif;">Quero avaliar minha empresa</button>
+            <a href="https://artefiscal.com.br/" target="_blank" rel="noopener" style="text-decoration:none; color:#56514A; font-size:13.5px; border-bottom:1px solid rgba(43,40,35,0.3); padding-bottom:2px;">Conhecer a Arte Fiscal ↗</a>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" style="background:#FAF6EF; border-radius:10px; padding:clamp(30px,3.4vw,44px); position:relative; overflow:hidden;">
+          <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6);"></div>
+          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:18px;">O que avaliamos</div>
+          <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:16px;">
+            <li style="padding-top:14px; border-top:1px solid rgba(43,40,35,0.1); font-size:15px; color:#2B2823;">Tributos pagos a maior nos últimos 5 anos</li>
+            <li style="padding-top:14px; border-top:1px solid rgba(43,40,35,0.1); font-size:15px; color:#2B2823;">Créditos tributários não aproveitados</li>
+            <li style="padding-top:14px; border-top:1px solid rgba(43,40,35,0.1); font-size:15px; color:#2B2823;">Enquadramento e regime tributário</li>
+            <li style="padding-top:14px; border-top:1px solid rgba(43,40,35,0.1); font-size:15px; color:#2B2823;">Oportunidades específicas do seu segmento</li>
+          </ul>
+          <p style="margin:22px 0 0; font-size:12.5px; line-height:1.6; color:#8C857A;">Cada caso é avaliado individualmente. Não trabalhamos com promessas de valor, percentual ou prazo de recuperação antes da análise técnica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · AGRONEGÓCIO & PRODUTOR RURAL ============ -->
+  <section id="produtor-rural" style="scroll-margin-top:90px; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="pc-2col" style="display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(40px,6vw,90px); align-items:end; margin-bottom:clamp(50px,6vw,84px);">
+        <div>
+          <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#52B788;">06</span>
+            <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Agronegócio & Produtor Rural</span>
+          </div>
+          <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,60px); line-height:1.04; letter-spacing:-0.012em;">
+            Contabilidade para quem <span style="font-style:italic;">cuida da terra.</span>
+          </h2>
+        </div>
+        <p data-reveal data-reveal-delay="0.14" style="margin:0; font-size:16px; line-height:1.8; color:#56514A;">
+          Assessoria contábil, fiscal e tributária para produtores rurais, propriedades e empresas do agronegócio, com tecnologia que reduz o trabalho manual.
+        </p>
+      </div>
+
+      <!-- Pacotes Agro -->
+      <div class="pc-agro-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-bottom:clamp(64px,7vw,96px);">
+        <div data-reveal class="pc-svc-item" style="background:#FAF6EF; border-radius:10px; padding:clamp(26px,2.6vw,32px); border:1px solid rgba(43,40,35,0.1);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:10px;">01</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:23px; line-height:1.1;">Agro Básico</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.65; color:#56514A;">Serviços avulsos sob demanda, sem mensalidade nem acompanhamento continuado.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.05" class="pc-svc-item" style="background:#FAF6EF; border-radius:10px; padding:clamp(26px,2.6vw,32px); border:1px solid rgba(43,40,35,0.1);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:10px;">02</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:23px; line-height:1.1;">Agro Controle</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.65; color:#56514A;">Importação automática de notas de compras e vendas, mais todos os serviços do pacote anterior.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" class="pc-svc-highlight" style="background:#EAE4F0; border-radius:10px; padding:clamp(26px,2.6vw,32px); border:1px solid rgba(110,63,163,0.18);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#6E3FA3; margin-bottom:10px;">03</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:23px; line-height:1.1;">Agro Estratégico</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.65; color:#56514A;">Extratos automáticos, mais diagnóstico semestral para o Imposto de Renda.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.15" class="pc-svc-item" style="background:#FAF6EF; border-radius:10px; padding:clamp(26px,2.6vw,32px); border:1px solid rgba(43,40,35,0.1);">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:10px;">04</div>
+          <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:23px; line-height:1.1;">Agro Premium</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.65; color:#56514A;">Planejamento tributário, patrimonial e financeiro completo para a propriedade.</p>
+        </div>
+      </div>
+      <p data-reveal style="margin:-66px 0 64px; font-size:13px; color:#8C857A; text-align:center;">Cada pacote inclui todos os serviços do anterior. Valores sob consulta, conforme o perfil da propriedade.</p>
+
+      <!-- Fluxo de automação -->
+      <div data-reveal style="margin-bottom:40px;">
+        <h3 style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3vw,36px); line-height:1.1;">Da nota fiscal ao Imposto de Renda, sem stress.</h3>
+        <p style="margin:14px 0 0; max-width:600px; font-size:15.5px; line-height:1.74; color:#56514A;">Veja como a automação integrada da Pires captura, organiza e otimiza o resultado da sua propriedade rural.</p>
+      </div>
+      <div class="pc-flow" style="display:grid; grid-template-columns:repeat(6,1fr); gap:24px; margin-bottom:clamp(56px,6vw,84px);">
+        <div data-reveal class="pc-journey-step" style="padding-top:22px; border-top:2px solid #52B788;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:8px;">Etapa 01</div>
+          <h4 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px;">Entrada de dados</h4>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:#56514A;">Notas fiscais de entrada e saída capturadas automaticamente via SIEG.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.05" class="pc-journey-step" style="padding-top:22px; border-top:2px solid #2D6A4F;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:8px;">Etapa 02</div>
+          <h4 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px;">Movimentação financeira</h4>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:#56514A;">Extratos e comprovantes importados e classificados automaticamente.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" class="pc-journey-step" style="padding-top:22px; border-top:2px solid #6E3FA3;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:8px;">Etapa 03</div>
+          <h4 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px;">Sistema contábil</h4>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:#56514A;">Lançamento direto no Domínio, com conciliação bancária automática.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.15" class="pc-journey-step" style="padding-top:22px; border-top:2px solid #C7418B;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:8px;">Etapa 04</div>
+          <h4 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px;">Livro Caixa Digital</h4>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:#56514A;">Despesas dedutíveis e receitas classificadas continuamente.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.2" class="pc-journey-step" style="padding-top:22px; border-top:2px solid #F0764E;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:8px;">Etapa 05</div>
+          <h4 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px;">Resultado final</h4>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:#56514A;">Declaração de IR entregue no prazo, com o menor imposto possível dentro da lei.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.25" class="pc-journey-step" style="padding-top:22px; border-top:2px solid #3A5FCD;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#8C857A; margin-bottom:8px;">Etapa 06</div>
+          <h4 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px;">Reforma Tributária</h4>
+          <p style="margin:0; font-size:12.5px; line-height:1.6; color:#56514A;">Cálculo do CBS com precisão e aproveitamento de créditos disponíveis.</p>
+        </div>
+      </div>
+
+      <!-- Reforma Tributária -->
+      <div data-reveal id="reforma-tributaria" style="scroll-margin-top:90px; background:#2B2823; border-radius:14px; padding:clamp(36px,4vw,56px); color:#F4EFE7;">
+        <div class="pc-2col" style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:clamp(32px,4vw,56px); align-items:center;">
+          <div>
+            <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#A79E90; font-weight:600;">Reforma Tributária</span>
+            <h3 style="margin:14px 0 0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.8vw,32px); line-height:1.18;">Produtor Rural Não Contribuinte: adequação para 2026–2027.</h3>
+            <p style="margin:16px 0 0; max-width:480px; font-size:14.5px; line-height:1.74; color:#CFC7B9;">
+              Acompanhamos a adequação fiscal ao CBS e ao IBS (EC 132/2023, LC 214/2025), organizando a transição tributária do produtor rural não contribuinte com orientação para cada decisão.
+            </p>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <button type="button" class="js-open-form" data-service="Reforma Tributária" style="border:1px solid rgba(244,239,231,0.3); cursor:pointer; background:transparent; color:#F4EFE7; padding:15px 26px; border-radius:999px; font-size:13.5px; font-family:'Hanken Grotesk',sans-serif; letter-spacing:.02em;">Falar sobre Reforma Tributária</button>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="text-align:center; margin-top:clamp(40px,5vw,56px);">
+        <button type="button" class="btn-dark js-open-form" data-service="Produtor Rural" style="border:none; cursor:pointer; text-decoration:none; background:#2B2823; color:#F4EFE7; padding:17px 32px; border-radius:999px; font-size:14.5px; letter-spacing:.02em; font-weight:500; font-family:'Hanken Grotesk',sans-serif;">Falar com a Pires sobre Produtor Rural</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 · FERRAMENTAS DIGITAIS ============ -->
+  <section id="ferramentas" style="scroll-margin-top:90px; background:#EFE7DA; padding:clamp(64px,8vw,108px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:20px;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#36AEC6;">07</span>
+        <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Ferramentas digitais de trabalho</span>
+      </div>
+      <h2 data-reveal data-reveal-delay="0.06" style="margin:0 0 clamp(40px,5vw,56px); max-width:20ch; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.1; letter-spacing:-0.01em;">
+        Tecnologia para precisão, agilidade <span style="font-style:italic;">e automação contábil.</span>
+      </h2>
+      <div class="pc-tools-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,3vw,36px);">
+        <div data-reveal class="pc-svc-item" style="padding-top:20px; border-top:1px solid rgba(43,40,35,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px;">SIEG</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#56514A;">Gestão e importação de notas fiscais eletrônicas direto da Receita Federal e da SEFAZ.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.04" class="pc-svc-item" style="padding-top:20px; border-top:1px solid rgba(43,40,35,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px;">Domínio</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#56514A;">Sistema contábil para gestão fiscal, contábil e trabalhista, sempre atualizado.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.08" class="pc-svc-item" style="padding-top:20px; border-top:1px solid rgba(43,40,35,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px;">ECONET</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#56514A;">Consultoria tributária, treinamentos e atualização fiscal contínua.</p>
+        </div>
+        <div data-reveal class="pc-svc-item" style="padding-top:20px; border-top:1px solid rgba(43,40,35,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px;">Mister Contador</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#56514A;">Importação automática de extratos e comprovantes bancários, com foco em Livro Caixa Rural.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.04" class="pc-svc-item" style="padding-top:20px; border-top:1px solid rgba(43,40,35,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px;">ONVIO</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#56514A;">Portal de comunicação e solicitação integrada entre o escritório e os clientes.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.08" class="pc-svc-item" style="padding-top:20px; border-top:1px solid rgba(43,40,35,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px;">WhatsApp Integrado</h3>
+          <p style="margin:0; font-size:14px; line-height:1.65; color:#56514A;">Gestão de mensagens e atendimento rápido, com envio de informações aos clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 · PARCERIAS ============ -->
+  <section id="parcerias" style="scroll-margin-top:90px; padding:clamp(64px,8vw,108px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:20px;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#C7418B;">08</span>
+        <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Parcerias estratégicas</span>
+      </div>
+      <h2 data-reveal data-reveal-delay="0.06" style="margin:0 0 clamp(40px,5vw,56px); max-width:22ch; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.1; letter-spacing:-0.01em;">
+        Parceiros que <span style="font-style:italic;">fortalecem</span> a gestão do seu negócio.
+      </h2>
+      <div class="pc-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,3vw,36px);">
+        <div data-reveal style="background:#FAF6EF; border-radius:10px; padding:clamp(28px,3vw,40px); border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 12px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px;">Conta Azul</h3>
+          <p style="margin:0 0 16px; font-size:15px; line-height:1.74; color:#56514A;">Clientes da Pires podem ter acesso a condições especiais, incluindo desconto de 50% na mensalidade do ERP Conta Azul, conforme regras da parceria.</p>
+          <ul style="margin:0 0 20px; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; color:#2B2823;">
+            <li>✓ Controle financeiro</li>
+            <li>✓ Controle de estoque</li>
+            <li>✓ Acesso online</li>
+          </ul>
+          <a href="https://contaazul.com/planos/" target="_blank" rel="noopener" style="text-decoration:none; color:#6E3FA3; font-size:13.5px; border-bottom:1px solid rgba(110,63,163,0.4); padding-bottom:2px;">Conhecer os planos Conta Azul ↗</a>
+        </div>
+        <div data-reveal data-reveal-delay="0.06" style="background:#FAF6EF; border-radius:10px; padding:clamp(28px,3vw,40px); border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 12px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:25px;">Arte Fiscal</h3>
+          <p style="margin:0 0 16px; font-size:15px; line-height:1.74; color:#56514A;">Parceria estratégica para soluções de recuperação tributária e análise de oportunidades fiscais, com mais profundidade técnica.</p>
+          <a href="https://artefiscal.com.br/" target="_blank" rel="noopener" style="text-decoration:none; color:#6E3FA3; font-size:13.5px; border-bottom:1px solid rgba(110,63,163,0.4); padding-bottom:2px;">Conhecer a Arte Fiscal ↗</a>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="0.1" style="margin-top:20px; padding:18px 24px; border:1px dashed rgba(43,40,35,0.2); border-radius:10px; font-size:13.5px; color:#8C857A;">Novas parcerias em breve.</div>
+    </div>
+  </section>
+
+  <!-- ============ 09 · PLANOS ============ -->
+  <section id="planos" style="scroll-margin-top:90px; background:#EFE7DA; padding:clamp(64px,8vw,108px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:20px;">
+        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#3A5FCD;">09</span>
+        <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">Planos</span>
+      </div>
+      <h2 data-reveal data-reveal-delay="0.06" style="margin:0 0 clamp(40px,5vw,56px); max-width:22ch; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.1; letter-spacing:-0.01em;">
+        Um plano para cada <span style="font-style:italic;">fase do seu negócio.</span>
+      </h2>
+      <div class="pc-plans-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+        <div data-reveal class="pc-svc-item js-open-form" data-service="Contabilidade Empresarial" role="button" tabindex="0" style="cursor:pointer; background:#FAF6EF; border-radius:10px; padding:24px; border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">Empresarial</h3>
+          <p style="margin:0; font-size:13px; color:#8C857A;">Sob consulta</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.03" class="pc-svc-item js-open-form" data-service="Contabilidade para MEI" role="button" tabindex="0" style="cursor:pointer; background:#FAF6EF; border-radius:10px; padding:24px; border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">MEI</h3>
+          <p style="margin:0; font-size:13px; color:#8C857A;">Sob consulta</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.06" class="pc-svc-item js-open-form" data-service="Departamento Pessoal" role="button" tabindex="0" style="cursor:pointer; background:#FAF6EF; border-radius:10px; padding:24px; border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">Departamento Pessoal</h3>
+          <p style="margin:0; font-size:13px; color:#8C857A;">Sob consulta</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.09" class="pc-svc-item js-open-form" data-service="Agronegócio" role="button" tabindex="0" style="cursor:pointer; background:#FAF6EF; border-radius:10px; padding:24px; border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">Agronegócio</h3>
+          <p style="margin:0; font-size:13px; color:#8C857A;">Sob consulta</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.12" class="pc-svc-item js-open-form" data-service="Produtor Rural" role="button" tabindex="0" style="cursor:pointer; background:#FAF6EF; border-radius:10px; padding:24px; border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">Produtor Rural</h3>
+          <p style="margin:0; font-size:13px; color:#8C857A;">4 pacotes Agro · sob consulta</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.15" class="pc-svc-item js-open-form" data-service="Planejamento Tributário" role="button" tabindex="0" style="cursor:pointer; background:#FAF6EF; border-radius:10px; padding:24px; border:1px solid rgba(43,40,35,0.1);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">Planejamento Tributário</h3>
+          <p style="margin:0; font-size:13px; color:#8C857A;">Sob consulta</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.18" class="pc-svc-highlight js-open-form" data-service="Recuperação Tributária" role="button" tabindex="0" style="cursor:pointer; background:#EAE4F0; border-radius:10px; padding:24px; border:1px solid rgba(110,63,163,0.18);">
+          <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px;">Recuperação Tributária</h3>
+          <p style="margin:0; font-size:13px; color:#6E3FA3;">Análise técnica · sob consulta</p>
+        </div>
+      </div>
+      <p data-reveal data-reveal-delay="0.2" style="margin:28px 0 0; max-width:560px; font-size:14px; line-height:1.7; color:#8C857A;">Não publicamos valores fixos: cada proposta é avaliada conforme o perfil e o momento do cliente. Clique em um plano para falar diretamente com a Pires pelo WhatsApp.</p>
+    </div>
+  </section>
+
+  <!-- ============ 10 · EXPERIÊNCIA DO CLIENTE ============ -->
   <section id="experiencia" style="scroll-margin-top:90px; background:#2B2823; color:#F4EFE7; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
     <div style="max-width:1280px; margin:0 auto;">
       <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#E79A7E;">05</span>
+        <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#E79A7E;">10</span>
         <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#A79E90; font-weight:600;">Experiência do cliente</span>
       </div>
       <h2 data-reveal data-reveal-delay="0.08" style="margin:0 0 clamp(54px,6vw,84px); font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,64px); line-height:1.02; letter-spacing:-0.012em; max-width:18ch;">
@@ -559,73 +843,40 @@
     </div>
   </section>
 
-  <!-- ============ 06 · FUTURO ============ -->
+  <!-- ============ 11 · FUTURO ============ -->
   <section id="futuro" style="scroll-margin-top:90px; padding:clamp(80px,11vw,160px) clamp(24px,5vw,86px);">
     <div style="max-width:1280px; margin:0 auto;">
       <div class="pc-fut" style="display:grid; grid-template-columns:0.92fr 1.08fr; gap:clamp(40px,6vw,90px); align-items:center;">
         <div>
           <div data-reveal style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
-            <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#6E3FA3;">06</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:15px; color:#6E3FA3;">11</span>
             <span style="font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:#8C857A; font-weight:600;">O futuro da Pires</span>
           </div>
           <h2 data-reveal data-reveal-delay="0.08" style="margin:0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(34px,4.6vw,64px); line-height:1.02; letter-spacing:-0.012em;">
-            Estamos construindo<br>algo <span style="font-style:italic;">maior</span> para<br>atender melhor.
+            Nova sede <span style="font-style:italic;">em evolução.</span>
           </h2>
           <p data-reveal data-reveal-delay="0.14" style="margin:30px 0 0; max-width:480px; font-size:17px; line-height:1.78; color:#56514A;">
             A nova sede não é sobre tijolos. É a tradução física de uma visão: estrutura para acolher mais clientes, tecnologia para entregar com excelência e um espaço à altura da relação que construímos.
           </p>
           <p data-reveal data-reveal-delay="0.2" style="margin:18px 0 0; max-width:480px; font-size:17px; line-height:1.78; color:#56514A;">
-            Um símbolo de crescimento, feito com a mesma seriedade com que cuidamos de cada projeto de vida.
+            Acompanhe o antes e depois da obra. Arraste o controle abaixo para revelar a visão final.
           </p>
         </div>
 
-        <div data-reveal data-reveal-delay="0.1" class="pc-slider" id="pc-futuro-slider">
-          <div class="pc-slider-track">
-            <div class="pc-slide">
-              <img src="assets/render-sede.jpg" alt="Projeto da futura sede da Pires Contabilidade" loading="lazy" class="pc-arch" style="object-position:50% 56%;">
-              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
-              <div style="position:absolute; inset:0; box-shadow:inset 0 0 90px rgba(43,40,35,0.14); pointer-events:none;"></div>
-              <div class="pc-slider-caption">
-                <span class="pc-slider-label">Render · futura sede</span>
-                <span class="pc-slider-title">A visão pronta</span>
-              </div>
-            </div>
-            <div class="pc-slide">
-              <img src="assets/obra.jpg" alt="Obra da nova sede, estrutura inicial" loading="lazy" class="pc-arch" style="object-position:50% 52%;">
-              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.14), rgba(110,63,163,0.09)); mix-blend-mode:multiply;"></div>
-              <div class="pc-slider-caption">
-                <span class="pc-slider-label">Obra · estrutura inicial</span>
-                <span class="pc-slider-title">Onde tudo começou</span>
-              </div>
-            </div>
-            <div class="pc-slide">
-              <img src="assets/obra-atual.jpg" alt="Obra da nova sede, avanço da construção" loading="lazy" class="pc-arch" style="object-position:50% 48%;">
-              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.12), rgba(110,63,163,0.08)); mix-blend-mode:multiply;"></div>
-              <div class="pc-slider-caption">
-                <span class="pc-slider-label">Obra · acompanhe a evolução</span>
-                <span class="pc-slider-title">A obra avança</span>
-              </div>
-            </div>
-            <div class="pc-slide">
-              <img src="assets/detalhe.jpg" alt="Detalhe da fachada com a marca Pires Contabilidade" loading="lazy" class="pc-arch" style="object-position:50% 46%;">
-              <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(244,239,231,0.10), rgba(110,63,163,0.06)); mix-blend-mode:multiply;"></div>
-              <div class="pc-slider-caption">
-                <span class="pc-slider-label">Detalhe · fachada</span>
-                <span class="pc-slider-title">A marca na arquitetura</span>
-              </div>
-            </div>
+        <div data-reveal data-reveal-delay="0.1" class="pc-ba" id="pc-ba-slider">
+          <div class="pc-ba-depois">
+            <img src="assets/sede-depois.jpg" alt="Projeto da futura sede da Pires Contabilidade" loading="lazy" class="pc-arch">
           </div>
-          <button class="pc-slider-btn pc-slider-prev" aria-label="Imagem anterior" type="button">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="pc-slider-btn pc-slider-next" aria-label="Próxima imagem" type="button">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="pc-slider-dots">
-            <button class="pc-slider-dot active" type="button" aria-label="Slide 1"></button>
-            <button class="pc-slider-dot" type="button" aria-label="Slide 2"></button>
-            <button class="pc-slider-dot" type="button" aria-label="Slide 3"></button>
-            <button class="pc-slider-dot" type="button" aria-label="Slide 4"></button>
+          <div class="pc-ba-antes" id="pc-ba-antes-wrap">
+            <img src="assets/sede-antes.jpg" alt="Obra da nova sede em construção, foto atual" loading="lazy" class="pc-arch">
+          </div>
+          <span class="pc-ba-label pc-ba-label-left">Antes</span>
+          <span class="pc-ba-label pc-ba-label-right">Depois</span>
+          <input type="range" id="pc-ba-range" class="pc-ba-range" min="0" max="100" value="50" step="1" aria-label="Comparar antes e depois da nova sede: arraste para revelar a obra concluída">
+          <div class="pc-ba-divider" id="pc-ba-divider">
+            <div class="pc-ba-handle">
+              <svg width="18" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6"></path><path d="M15 6l6 6-6 6"></path></svg>
+            </div>
           </div>
         </div>
       </div>
@@ -654,6 +905,60 @@
         <div data-reveal data-reveal-delay="0.18" style="padding-top:24px; border-top:1px solid rgba(43,40,35,0.2);">
           <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,2.6vw,34px); line-height:1.05;">Agro &amp; pessoas físicas</div>
           <div style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-top:10px;">Produtores rurais e PF</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASES E FEEDBACKS ============ -->
+  <section id="cases" style="scroll-margin-top:90px; padding:clamp(64px,8vw,108px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div data-reveal style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; margin-bottom:clamp(40px,5vw,56px);">
+        <h2 style="margin:0; max-width:20ch; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.1; letter-spacing:-0.01em;">
+          Cases e <span style="font-style:italic;">feedbacks.</span>
+        </h2>
+        <span style="font-size:13px; color:#8C857A; max-width:340px; text-align:right;">Em construção. Publicamos apenas histórias reais, com autorização do cliente.</span>
+      </div>
+      <div class="pc-tools-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,2.6vw,28px);">
+        <div data-reveal style="border:1px dashed rgba(43,40,35,0.25); border-radius:10px; padding:clamp(26px,3vw,34px); text-align:center;">
+          <div style="width:38px; height:38px; border-radius:50%; background:#EFE7DA; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-style:italic; color:#8C857A;">?</div>
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#8C857A;">Case em validação</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.05" style="border:1px dashed rgba(43,40,35,0.25); border-radius:10px; padding:clamp(26px,3vw,34px); text-align:center;">
+          <div style="width:38px; height:38px; border-radius:50%; background:#EFE7DA; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-style:italic; color:#8C857A;">?</div>
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#8C857A;">Depoimentos serão inseridos após autorização dos clientes</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" style="border:1px dashed rgba(43,40,35,0.25); border-radius:10px; padding:clamp(26px,3vw,34px); text-align:center;">
+          <div style="width:38px; height:38px; border-radius:50%; background:#EFE7DA; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-style:italic; color:#8C857A;">?</div>
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#8C857A;">Em breve, histórias reais de clientes atendidos pela Pires</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTEÚDOS ============ -->
+  <section id="conteudos" style="scroll-margin-top:90px; background:#EFE7DA; padding:clamp(64px,8vw,108px) clamp(24px,5vw,86px);">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="pc-2col" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(40px,6vw,90px); align-items:center;">
+        <div>
+          <h2 data-reveal style="margin:0; max-width:18ch; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,46px); line-height:1.1; letter-spacing:-0.01em;">
+            Conteúdos e <span style="font-style:italic;">orientações.</span>
+          </h2>
+          <p data-reveal data-reveal-delay="0.06" style="margin:20px 0 0; max-width:480px; font-size:15.5px; line-height:1.74; color:#56514A;">
+            Reforma Tributária, Produtor Rural, Regularização Fiscal, MEI, Departamento Pessoal e IRPF: acompanhe pelo Instagram da Magda.
+          </p>
+          <div data-reveal data-reveal-delay="0.12" style="display:flex; flex-wrap:wrap; gap:14px; margin-top:30px;">
+            <a href="https://www.instagram.com/magda.pirescontabilidade.to/" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; background:#2B2823; color:#F4EFE7; padding:15px 28px; border-radius:999px; font-size:14px; letter-spacing:.02em; font-weight:500;">Seguir no Instagram</a>
+            <span style="display:inline-flex; align-items:center; color:#8C857A; font-size:13px; border:1px solid rgba(43,40,35,0.18); padding:14px 22px; border-radius:999px;">YouTube · canal em validação</span>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="0.1" style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span class="pc-chip" style="cursor:default;">Reforma Tributária</span>
+          <span class="pc-chip" style="cursor:default;">Produtor Rural</span>
+          <span class="pc-chip" style="cursor:default;">Regularização Fiscal</span>
+          <span class="pc-chip" style="cursor:default;">MEI</span>
+          <span class="pc-chip" style="cursor:default;">Departamento Pessoal</span>
+          <span class="pc-chip" style="cursor:default;">IRPF</span>
         </div>
       </div>
     </div>
@@ -709,7 +1014,7 @@
   <!-- ============ FOOTER ============ -->
   <footer style="background:#2B2823; color:#CFC7B9; padding:clamp(56px,7vw,88px) clamp(24px,5vw,86px) 40px;">
     <div style="max-width:1280px; margin:0 auto;">
-      <div class="pc-2col" style="display:grid; grid-template-columns:1.3fr 1fr; gap:48px; padding-bottom:46px; border-bottom:1px solid rgba(244,239,231,0.14);">
+      <div class="pc-footer-grid" style="display:grid; grid-template-columns:1.1fr 0.7fr 1fr; gap:40px; padding-bottom:46px; border-bottom:1px solid rgba(244,239,231,0.14);">
         <div>
           <div style="display:flex; align-items:center; gap:13px;">
             <img src="assets/logo.png" alt="Pires Contabilidade" style="width:54px; height:auto;">
@@ -721,6 +1026,17 @@
           <p style="margin:24px 0 0; max-width:380px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.4; color:#E7DECF;">
             Cada empresa é um projeto de vida. E todo projeto merece clareza.
           </p>
+        </div>
+        <div>
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#A79E90; font-weight:600; margin-bottom:14px;">Navegação</div>
+          <a href="#solucoes" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Soluções</a>
+          <a href="#recuperacao-tributaria" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Recuperação Tributária</a>
+          <a href="#produtor-rural" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Agro & Produtor Rural</a>
+          <a href="#ferramentas" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Ferramentas</a>
+          <a href="#parcerias" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Parcerias</a>
+          <a href="#planos" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Planos</a>
+          <a href="#cases" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px; margin-bottom:10px;">Cases</a>
+          <a href="#conteudos" style="display:block; text-decoration:none; color:#E7DECF; font-size:14px;">Conteúdos</a>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:40px;">
           <div>
@@ -812,7 +1128,7 @@
     function closeMenu(){ if(!mm||!hb) return; mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
     if(hb){ hb.addEventListener('click', openMenu); }
     if(mmClose){ mmClose.addEventListener('click', closeMenu); }
-    if(mm){ mm.querySelectorAll('.mm-link:not(.mm-acc-trigger),.mm-cta').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
+    if(mm){ mm.querySelectorAll('.mm-link:not(.mm-acc-trigger),.mm-cta,.mm-sub').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
 
     // mobile accordion (Serviços / Soluções)
@@ -876,6 +1192,14 @@
         e.preventDefault();
         openForm(el.getAttribute('data-service') || '');
       });
+      if (el.getAttribute('role') === 'button') {
+        el.addEventListener('keydown', function(e){
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openForm(el.getAttribute('data-service') || '');
+          }
+        });
+      }
     });
     if (formClose) formClose.addEventListener('click', closeForm);
     if (formOverlay) formOverlay.addEventListener('click', function(e){ if (e.target === formOverlay) closeForm(); });
@@ -889,11 +1213,11 @@
         var servico = fServico.value;
         var email = fEmail.value.trim();
         var valid = true;
-        [fNome, fTelefone, fServico].forEach(function(f){ f.classList.remove('pc-field-error'); });
-        if (!nome) { fNome.classList.add('pc-field-error'); valid = false; }
-        if (!telefone || telefone.replace(/\D/g, '').length < 10) { fTelefone.classList.add('pc-field-error'); valid = false; }
-        if (!servico) { fServico.classList.add('pc-field-error'); valid = false; }
-        if (!valid) return;
+        [fNome, fTelefone, fServico].forEach(function(f){ f.classList.remove('pc-field-error'); f.removeAttribute('aria-invalid'); });
+        if (!nome) { fNome.classList.add('pc-field-error'); fNome.setAttribute('aria-invalid', 'true'); valid = false; }
+        if (!telefone || telefone.replace(/\D/g, '').length < 10) { fTelefone.classList.add('pc-field-error'); fTelefone.setAttribute('aria-invalid', 'true'); valid = false; }
+        if (!servico) { fServico.classList.add('pc-field-error'); fServico.setAttribute('aria-invalid', 'true'); valid = false; }
+        if (!valid) { var firstInvalid = leadForm.querySelector('.pc-field-error'); if (firstInvalid) firstInvalid.focus(); return; }
 
         var msg = 'Olá, sou ' + nome + '. Meu telefone é ' + telefone + '. Tenho interesse no serviço: ' + servico + '.';
         if (email) { msg += ' Meu e-mail: ' + email + '.'; }
@@ -906,43 +1230,20 @@
       });
     }
 
-    // futuro slider
-    var slider = document.getElementById('pc-futuro-slider');
-    if (slider) {
-      var track = slider.querySelector('.pc-slider-track');
-      var slides = slider.querySelectorAll('.pc-slide');
-      var dots = slider.querySelectorAll('.pc-slider-dot');
-      var prevBtn = slider.querySelector('.pc-slider-prev');
-      var nextBtn = slider.querySelector('.pc-slider-next');
-      var total = slides.length;
-      var idx = 0;
-      var auto = null;
-
-      function goTo(i){
-        idx = (i + total) % total;
-        track.style.transform = 'translateX(-' + (idx * (100 / total)) + '%)';
-        dots.forEach(function(d, di){ d.classList.toggle('active', di === idx); });
+    // futuro: slider antes/depois (range input nativo = mouse, touch e teclado)
+    var baSlider = document.getElementById('pc-ba-slider');
+    if (baSlider) {
+      var baRange = document.getElementById('pc-ba-range');
+      var baAntes = document.getElementById('pc-ba-antes-wrap');
+      var baDivider = document.getElementById('pc-ba-divider');
+      function updateBA(val){
+        baAntes.style.clipPath = 'inset(0 ' + (100 - val) + '% 0 0)';
+        baDivider.style.left = val + '%';
       }
-      function startAuto(){ auto = setInterval(function(){ goTo(idx + 1); }, 5500); }
-      function stopAuto(){ if (auto) { clearInterval(auto); auto = null; } }
-
-      if (prevBtn) prevBtn.addEventListener('click', function(){ goTo(idx - 1); stopAuto(); startAuto(); });
-      if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(idx + 1); stopAuto(); startAuto(); });
-      dots.forEach(function(d, di){ d.addEventListener('click', function(){ goTo(di); stopAuto(); startAuto(); }); });
-
-      var startX = 0, deltaX = 0, dragging = false;
-      track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; dragging = true; stopAuto(); }, { passive:true });
-      track.addEventListener('touchmove', function(e){ if (!dragging) return; deltaX = e.touches[0].clientX - startX; }, { passive:true });
-      track.addEventListener('touchend', function(){
-        if (Math.abs(deltaX) > 40) { goTo(deltaX < 0 ? idx + 1 : idx - 1); }
-        dragging = false; deltaX = 0; startAuto();
-      });
-
-      slider.addEventListener('mouseenter', stopAuto);
-      slider.addEventListener('mouseleave', startAuto);
-
-      goTo(0);
-      startAuto();
+      if (baRange) {
+        baRange.addEventListener('input', function(){ updateBA(baRange.value); });
+        updateBA(baRange.value);
+      }
     }
   })();
 </script>
