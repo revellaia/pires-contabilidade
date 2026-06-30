@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="Contabilidade estratégica com clareza, segurança e crescimento. Araguaína-TO.">
 <meta name="twitter:image" content="https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AccountingService","name":"Pires Contabilidade","url":"https://revellaia.github.io/pires-contabilidade/","logo":"https://revellaia.github.io/pires-contabilidade/assets/logo.png","image":"https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg","description":"Contabilidade estratégica para quem busca clareza, segurança e crescimento.","telephone":"+55-63-99214-1495","email":"pirescontabilidadeadm@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua dos Eletricistas, 138, Qd. TF, Lote 01","addressLocality":"Araguaína","addressRegion":"TO","addressCountry":"BR"},"founder":{"@type":"Person","name":"Magda Helley Costa Pires","jobTitle":"CEO","hasCredential":"CRC-TO 005688/O-7"},"sameAs":["https://www.instagram.com/pirescontabilidade.to"]}
+{"@context":"https://schema.org","@type":"AccountingService","name":"Pires Contabilidade","url":"https://revellaia.github.io/pires-contabilidade/","logo":"https://revellaia.github.io/pires-contabilidade/assets/logo.png","image":"https://revellaia.github.io/pires-contabilidade/assets/magda-hero.jpg","description":"Contabilidade estratégica para quem busca clareza, segurança e crescimento.","telephone":"+55-63-99214-1495","email":"contato@pirescontabilidadeto.com.br","areaServed":"BR","address":{"@type":"PostalAddress","streetAddress":"Rua dos Eletricistas, 138, Qd. TF, Lote 01","addressLocality":"Araguaína","addressRegion":"TO","addressCountry":"BR"},"founder":{"@type":"Person","name":"Magda Helley Costa Pires","jobTitle":"CEO","hasCredential":"CRC-TO 005688/O-7"},"sameAs":["https://www.instagram.com/magda.pirescontabilidade.to"]}
 </script>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -70,11 +70,29 @@
   /* ---- hamburger + mobile menu ---- */
   .pc-hamburger{ display:none; background:none; border:none; cursor:pointer; padding:8px 0; flex-direction:column; gap:6px; }
   .pc-hamburger .hb{ display:block; width:24px; height:1.5px; background:#2B2823; border-radius:2px; transition:transform .3s ease,opacity .25s ease; }
-  .pc-mobile-menu{ position:fixed; inset:0; background:rgba(244,239,231,0.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:49; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .38s cubic-bezier(.16,.7,.3,1), visibility .38s; }
+  .pc-mobile-menu{ position:fixed; inset:0; background:rgba(244,239,231,0.99); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); z-index:49; display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .38s cubic-bezier(.16,.7,.3,1), visibility .38s; padding:88px 26px 32px; overflow-y:auto; }
   .pc-mobile-menu.open{ opacity:1; visibility:visible; pointer-events:auto; }
-  .pc-mobile-menu .mm-link{ text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:clamp(32px,9vw,42px); font-weight:500; color:#2B2823; letter-spacing:-0.01em; padding:9px 0; }
-  .pc-mobile-menu .mm-cta{ margin-top:26px; text-decoration:none; background:#2B2823; color:#F4EFE7 !important; padding:16px 34px; border-radius:999px; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; letter-spacing:.02em; font-weight:500; }
+  .pc-mobile-menu .mm-scroll{ display:flex; flex-direction:column; }
+  .pc-mobile-menu .mm-link{ text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:clamp(25px,7vw,30px); font-weight:500; color:#2B2823; letter-spacing:-0.01em; padding:15px 2px; border-bottom:1px solid rgba(43,40,35,0.1); background:none; border-left:none; border-right:none; border-top:none; width:100%; text-align:left; cursor:pointer; display:flex; align-items:center; justify-content:space-between; }
+  .pc-mobile-menu .mm-acc-caret{ font-size:20px; color:#8C857A; font-family:'Hanken Grotesk',sans-serif; transition:transform .3s ease; }
+  .pc-mobile-menu .mm-accordion.open .mm-acc-caret{ transform:rotate(45deg); }
+  .pc-mobile-menu .mm-acc-panel{ max-height:0; overflow:hidden; transition:max-height .45s cubic-bezier(.16,.7,.3,1); display:flex; flex-direction:column; }
+  .pc-mobile-menu .mm-accordion.open .mm-acc-panel{ max-height:640px; }
+  .pc-mobile-menu .mm-sub{ text-decoration:none; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; color:#56514A; padding:12px 4px 12px 16px; border-left:2px solid rgba(110,63,163,0.25); }
+  .pc-mobile-menu .mm-cta{ margin-top:24px; text-decoration:none; background:#2B2823; color:#F4EFE7 !important; padding:17px 34px; border-radius:999px; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; letter-spacing:.02em; font-weight:500; border:none; cursor:pointer; text-align:center; }
   .pc-mobile-menu .mm-close{ position:absolute; top:22px; right:clamp(22px,5vw,72px); background:none; border:none; cursor:pointer; font-family:'Hanken Grotesk',sans-serif; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; padding:10px; }
+  /* ---- desktop dropdowns ---- */
+  .pc-dropdown{ position:relative; }
+  .pc-dropdown-trigger{ background:none; border:none; cursor:pointer; font:inherit; padding:0; color:#56514A; font-family:'Hanken Grotesk',sans-serif; }
+  .pc-dropdown-panel{ position:absolute; top:calc(100% + 20px); left:0; min-width:560px; max-width:calc(100vw - 48px); background:#FAF6EF; border-radius:10px; box-shadow:0 30px 70px -24px rgba(43,40,35,0.28); padding:28px 30px; display:flex; gap:36px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:opacity .3s cubic-bezier(.16,.7,.3,1), transform .3s cubic-bezier(.16,.7,.3,1), visibility .3s; z-index:60; }
+  .pc-dropdown-panel::before{ content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6); border-radius:10px 10px 0 0; }
+  .pc-dropdown.open .pc-dropdown-panel{ opacity:1; visibility:visible; transform:translateY(0); }
+  .pc-dropdown-panel-sm{ min-width:420px; }
+  .pc-dd-col{ display:flex; flex-direction:column; gap:2px; min-width:160px; }
+  .pc-dd-heading{ font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:10px; }
+  .pc-dd-link{ text-decoration:none; color:#2B2823; font-size:14px; padding:8px 0; transition:color .25s ease, padding-left .25s ease; cursor:pointer; background:none; border:none; text-align:left; font-family:'Hanken Grotesk',sans-serif; display:block; }
+  .pc-dd-link:hover{ color:#6E3FA3; padding-left:4px; }
+  @media (max-width:1180px){ .pc-dropdown-panel{ min-width:480px; gap:26px; } }
   /* email overflow */
   [href^="mailto"]{ word-break:break-all; }
   /* ---- nav gradient + scroll progress ---- */
@@ -117,6 +135,25 @@
     .pc-slider-btn{ width:32px; height:32px; }
     .pc-slider-title{ font-size:18px; }
   }
+  /* ---- modal: iniciar atendimento ---- */
+  .pc-modal-overlay{ position:fixed; inset:0; z-index:80; background:rgba(43,40,35,0.55); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .35s ease, visibility .35s; }
+  .pc-modal-overlay.open{ opacity:1; visibility:visible; pointer-events:auto; }
+  .pc-modal{ position:relative; background:#F4EFE7; border-radius:14px; max-width:480px; width:100%; max-height:90vh; overflow-y:auto; padding:clamp(28px,4vw,44px); box-shadow:0 50px 120px -30px rgba(43,40,35,0.5); transform:translateY(18px) scale(.98); transition:transform .4s cubic-bezier(.16,.7,.3,1); }
+  .pc-modal-overlay.open .pc-modal{ transform:translateY(0) scale(1); }
+  .pc-modal::before{ content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6); border-radius:14px 14px 0 0; }
+  .pc-modal-close{ position:absolute; top:18px; right:18px; width:34px; height:34px; border-radius:50%; border:1px solid rgba(43,40,35,0.15); background:#FAF6EF; color:#56514A; cursor:pointer; font-size:19px; line-height:1; display:flex; align-items:center; justify-content:center; }
+  .pc-modal-eyebrow{ font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#8C857A; font-weight:600; }
+  .pc-modal-title{ margin:14px 0 0; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3vw,30px); line-height:1.15; color:#2B2823; }
+  .pc-modal-sub{ margin:12px 0 0; font-size:14px; line-height:1.6; color:#56514A; }
+  .pc-modal-form{ display:flex; flex-direction:column; gap:16px; margin-top:28px; }
+  .pc-field{ display:flex; flex-direction:column; gap:7px; }
+  .pc-field-label{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#8C857A; font-weight:600; }
+  .pc-field input, .pc-field select{ font-family:'Hanken Grotesk',sans-serif; font-size:15px; padding:13px 14px; border-radius:7px; border:1px solid rgba(43,40,35,0.18); background:#FAF6EF; color:#2B2823; outline:none; transition:border-color .25s ease; }
+  .pc-field input:focus, .pc-field select:focus{ border-color:#6E3FA3; }
+  .pc-field-error{ border-color:#C7418B !important; }
+  .pc-field-submit{ margin-top:6px; background:#2B2823; color:#F4EFE7; border:none; cursor:pointer; padding:16px 26px; border-radius:999px; font-family:'Hanken Grotesk',sans-serif; font-size:14.5px; letter-spacing:.02em; font-weight:500; transition:transform .3s ease; }
+  .pc-field-submit:hover{ transform:translateY(-2px); }
+  .pc-field-note{ margin:4px 0 0; font-size:11.5px; line-height:1.6; color:#8C857A; }
 </style>
 </head>
 <body>
@@ -133,14 +170,60 @@
       </span>
     </a>
     <div style="display:flex; align-items:center; gap:34px;">
-      <div class="pc-navlinks" style="display:flex; align-items:center; gap:30px;">
+      <div class="pc-navlinks" style="display:flex; align-items:center; gap:26px;">
         <a href="#magda" class="navlink">A Magda</a>
         <a href="#pires" class="navlink">A Pires</a>
-        <a href="#solucoes" class="navlink">Soluções</a>
+        <div class="pc-dropdown">
+          <button type="button" class="navlink pc-dropdown-trigger" data-dd="servicos">Serviços</button>
+          <div class="pc-dropdown-panel" id="dd-servicos">
+            <div class="pc-dd-col">
+              <div class="pc-dd-heading">Comece por aqui</div>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Abrir uma empresa">Abra sua empresa</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Trocar de contador">Troque de contador</a>
+              <a href="#solucoes" class="pc-dd-link js-close-dd">Ver planos</a>
+            </div>
+            <div class="pc-dd-col">
+              <div class="pc-dd-heading">Serviços</div>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Planejamento Tributário">Planejamento Tributário</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="IRPF">IRPF</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</a>
+            </div>
+            <div class="pc-dd-col">
+              <div class="pc-dd-heading">&nbsp;</div>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Transformar MEI em ME">Transformar MEI para ME</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Abertura de MEI">Abertura de MEI</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</a>
+            </div>
+          </div>
+        </div>
+        <div class="pc-dropdown">
+          <button type="button" class="navlink pc-dropdown-trigger" data-dd="solucoes">Soluções</button>
+          <div class="pc-dropdown-panel pc-dropdown-panel-sm" id="dd-solucoes">
+            <div class="pc-dd-col">
+              <a href="#solucoes" class="pc-dd-link js-close-dd" style="color:#6E3FA3;">Ver todas as soluções</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Agronegócio">Agronegócio</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Produtor Rural">Produtor Rural</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Reforma Tributária">Reforma Tributária</a>
+            </div>
+            <div class="pc-dd-col">
+              <a href="#" class="pc-dd-link js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="IRPF">IRPF</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Consultoria Financeira">Consultoria Financeira</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Holding">Holding</a>
+              <a href="#" class="pc-dd-link js-open-form" data-service="Outro atendimento">Contabilidade Empresarial</a>
+            </div>
+          </div>
+        </div>
         <a href="#experiencia" class="navlink">Experiência</a>
         <a href="#futuro" class="navlink">Futuro</a>
+        <a href="#contato" class="navlink">Contato</a>
       </div>
-      <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" class="pc-navcta btn-dark" style="text-decoration:none; background:#2B2823; color:#F4EFE7; padding:12px 22px; border-radius:999px; font-size:13px; letter-spacing:.02em; font-weight:500; white-space:nowrap;">Falar com a Magda</a>
+      <button type="button" class="pc-navcta btn-dark js-open-form" data-service="" style="border:none; cursor:pointer; text-decoration:none; background:#2B2823; color:#F4EFE7; padding:12px 22px; border-radius:999px; font-size:13px; letter-spacing:.02em; font-weight:500; white-space:nowrap; font-family:'Hanken Grotesk',sans-serif;">Iniciar atendimento</button>
       <button class="pc-hamburger" id="pc-hb" aria-label="Abrir menu" aria-expanded="false">
         <span class="hb"></span>
         <span class="hb"></span>
@@ -150,12 +233,94 @@
   </nav>
   <div class="pc-mobile-menu" id="pc-mm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
     <button class="mm-close" id="pc-mm-close" aria-label="Fechar menu">Fechar</button>
-    <a href="#magda" class="mm-link">A Magda</a>
-    <a href="#pires" class="mm-link">A Pires</a>
-    <a href="#solucoes" class="mm-link">Soluções</a>
-    <a href="#experiencia" class="mm-link">Experiência</a>
-    <a href="#futuro" class="mm-link">Futuro</a>
-    <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" class="mm-cta">Falar com a Magda</a>
+    <div class="mm-scroll">
+      <a href="#magda" class="mm-link">A Magda</a>
+      <a href="#pires" class="mm-link">A Pires</a>
+      <div class="mm-accordion">
+        <button type="button" class="mm-link mm-acc-trigger" data-acc="servicos">Serviços <span class="mm-acc-caret">+</span></button>
+        <div class="mm-acc-panel" id="acc-servicos">
+          <a href="#" class="mm-sub js-open-form" data-service="Abrir uma empresa">Abra sua empresa</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Trocar de contador">Troque de contador</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Regularização Fiscal">Regularização Fiscal</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Planejamento Tributário">Planejamento Tributário</a>
+          <a href="#" class="mm-sub js-open-form" data-service="IRPF">IRPF</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Departamento Pessoal">Departamento Pessoal</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Contabilidade para MEI">Contabilidade para MEI</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Abertura de MEI">Abertura de MEI</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Encerramento de Empresa">Encerramento de Empresa</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Benefícios Fiscais">Benefícios Fiscais</a>
+        </div>
+      </div>
+      <div class="mm-accordion">
+        <button type="button" class="mm-link mm-acc-trigger" data-acc="solucoes">Soluções <span class="mm-acc-caret">+</span></button>
+        <div class="mm-acc-panel" id="acc-solucoes">
+          <a href="#" class="mm-sub js-open-form" data-service="Recuperação Tributária">Recuperação Tributária</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Agronegócio">Agronegócio</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Produtor Rural">Produtor Rural</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Reforma Tributária">Reforma Tributária</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Consultoria Financeira">Consultoria Financeira</a>
+          <a href="#" class="mm-sub js-open-form" data-service="Holding">Holding</a>
+        </div>
+      </div>
+      <a href="#experiencia" class="mm-link">Experiência</a>
+      <a href="#futuro" class="mm-link">Futuro</a>
+      <a href="#contato" class="mm-link">Contato</a>
+    </div>
+    <button type="button" class="mm-cta js-open-form" data-service="">Iniciar atendimento</button>
+  </div>
+
+  <!-- ============ MODAL · INICIAR ATENDIMENTO (WHATSAPP) ============ -->
+  <!-- Validação client-side apenas; nenhum dado é enviado a servidor/backend. Se um backend for adicionado no futuro, validar e sanitizar novamente no servidor antes de qualquer processamento. -->
+  <div class="pc-modal-overlay" id="pc-form-overlay">
+    <div class="pc-modal" role="dialog" aria-modal="true" aria-labelledby="pc-form-title">
+      <button type="button" class="pc-modal-close" id="pc-form-close" aria-label="Fechar formulário">&times;</button>
+      <div class="pc-modal-header">
+        <span class="pc-modal-eyebrow">Iniciar atendimento</span>
+        <h3 id="pc-form-title" class="pc-modal-title">Vamos conversar sobre o seu momento.</h3>
+        <p class="pc-modal-sub">Preencha os dados abaixo. Você será direcionado para uma conversa direta no WhatsApp com a Pires.</p>
+      </div>
+      <form id="pc-lead-form" class="pc-modal-form" novalidate>
+        <label class="pc-field">
+          <span class="pc-field-label">Nome completo *</span>
+          <input type="text" id="pc-f-nome" autocomplete="name" placeholder="Seu nome completo">
+        </label>
+        <label class="pc-field">
+          <span class="pc-field-label">Telefone / WhatsApp com DDD *</span>
+          <input type="tel" id="pc-f-telefone" autocomplete="tel" placeholder="(63) 9 9999-9999">
+        </label>
+        <label class="pc-field">
+          <span class="pc-field-label">Qual serviço deseja? *</span>
+          <select id="pc-f-servico">
+            <option value="" disabled selected>Selecione um serviço</option>
+            <option value="Abrir uma empresa">Abrir uma empresa</option>
+            <option value="Trocar de contador">Trocar de contador</option>
+            <option value="Regularização Fiscal">Regularização Fiscal</option>
+            <option value="Recuperação Tributária">Recuperação Tributária</option>
+            <option value="Planejamento Tributário">Planejamento Tributário</option>
+            <option value="Benefícios Fiscais">Benefícios Fiscais</option>
+            <option value="Transformar MEI em ME">Transformar MEI para ME</option>
+            <option value="Contabilidade para MEI">Contabilidade para MEI</option>
+            <option value="Abertura de MEI">Abertura de MEI</option>
+            <option value="Encerramento de Empresa">Encerramento de Empresa</option>
+            <option value="Produtor Rural">Produtor Rural</option>
+            <option value="Agronegócio">Agronegócio</option>
+            <option value="Reforma Tributária">Reforma Tributária</option>
+            <option value="Departamento Pessoal">Departamento Pessoal</option>
+            <option value="IRPF">IRPF</option>
+            <option value="Consultoria Financeira">Consultoria Financeira</option>
+            <option value="Holding">Holding</option>
+            <option value="Outro atendimento">Outro atendimento</option>
+          </select>
+        </label>
+        <label class="pc-field">
+          <span class="pc-field-label">E-mail (opcional)</span>
+          <input type="email" id="pc-f-email" autocomplete="email" placeholder="seu@email.com">
+        </label>
+        <button type="submit" class="pc-field-submit">Continuar no WhatsApp</button>
+        <p class="pc-field-note">Seus dados não são enviados a nenhum servidor. Ao continuar, abrimos uma conversa direta no WhatsApp da Pires Contabilidade.</p>
+      </form>
+    </div>
   </div>
 
   <!-- ============ 01 · HERO ============ -->
@@ -508,25 +673,29 @@
         <p data-reveal data-reveal-delay="0.14" style="margin:30px 0 0; max-width:480px; font-size:17.5px; line-height:1.74; color:#56514A;">
           Conte para a Magda o seu momento. A primeira conversa é o começo de uma contabilidade que trabalha a favor do seu crescimento.
         </p>
+        <p data-reveal data-reveal-delay="0.17" style="margin:14px 0 0; max-width:480px; font-size:14.5px; line-height:1.6; color:#8C857A;">
+          Estamos em Araguaína, Tocantins, e atendemos clientes em todo o Brasil com suporte digital, organização contábil e acompanhamento próximo.
+        </p>
         <div data-reveal data-reveal-delay="0.2" style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:42px;">
-          <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; gap:11px; background:#2B2823; color:#F4EFE7; padding:18px 32px; border-radius:999px; font-size:15px; letter-spacing:.02em; font-weight:500;">
+          <button type="button" class="btn-dark js-open-form" data-service="" style="border:none; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:11px; background:#2B2823; color:#F4EFE7; padding:18px 32px; border-radius:999px; font-size:15px; letter-spacing:.02em; font-weight:500; font-family:'Hanken Grotesk',sans-serif;">
             <span style="width:8px; height:8px; border-radius:50%; background:#36AEC6;"></span>
-            Falar pelo WhatsApp
-          </a>
+            Iniciar atendimento
+          </button>
           <span style="font-size:13px; color:#8C857A;">Resposta no mesmo dia útil.</span>
         </div>
         <div data-reveal data-reveal-delay="0.26" style="display:flex; flex-wrap:wrap; gap:30px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(43,40,35,0.12);">
           <div>
             <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:7px;">WhatsApp</div>
             <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#2B2823;">(63) 99214-1495</a>
+            <div style="margin-top:4px;"><a href="https://wa.me/5563992297155" target="_blank" rel="noopener" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:15px; color:#8C857A;">(63) 99229-7155</a></div>
           </div>
           <div>
             <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:7px;">Instagram</div>
-            <a href="https://instagram.com/pirescontabilidade.to" target="_blank" rel="noopener" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#2B2823;">@pirescontabilidade.to</a>
+            <a href="https://instagram.com/magda.pirescontabilidade.to" target="_blank" rel="noopener" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#2B2823;">@magda.pirescontabilidade.to</a>
           </div>
           <div>
             <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#8C857A; font-weight:600; margin-bottom:7px;">E-mail</div>
-            <a href="mailto:pirescontabilidadeadm@hotmail.com" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#2B2823;">pirescontabilidadeadm@hotmail.com</a>
+            <a href="mailto:contato@pirescontabilidadeto.com.br" style="text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:21px; color:#2B2823;">contato@pirescontabilidadeto.com.br</a>
           </div>
         </div>
       </div>
@@ -557,12 +726,13 @@
           <div>
             <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#A79E90; font-weight:600; margin-bottom:14px;">Contato</div>
             <a href="https://wa.me/5563992141495" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:#E7DECF; font-size:14.5px; margin-bottom:8px;">WhatsApp · (63) 99214-1495</a>
-            <a href="https://instagram.com/pirescontabilidade.to" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:#E7DECF; font-size:14.5px; margin-bottom:8px;">@pirescontabilidade.to</a>
-            <a href="mailto:pirescontabilidadeadm@hotmail.com" style="display:block; text-decoration:none; color:#E7DECF; font-size:14.5px;">pirescontabilidadeadm@hotmail.com</a>
+            <a href="https://wa.me/5563992297155" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:#A79E90; font-size:13px; margin-bottom:8px;">Outro WhatsApp · (63) 99229-7155</a>
+            <a href="https://instagram.com/magda.pirescontabilidade.to" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:#E7DECF; font-size:14.5px; margin-bottom:8px;">@magda.pirescontabilidade.to</a>
+            <a href="mailto:contato@pirescontabilidadeto.com.br" style="display:block; text-decoration:none; color:#E7DECF; font-size:14.5px;">contato@pirescontabilidadeto.com.br</a>
           </div>
           <div>
             <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#A79E90; font-weight:600; margin-bottom:14px;">Escritório</div>
-            <div style="font-size:14.5px; color:#E7DECF; line-height:1.7;">Rua dos Eletricistas, 138, Qd. TF, Lote 01<br>Jardim Paulista, Araguaína, Tocantins<br>Magda Helley Costa Pires · CRC-TO 005688/O-7</div>
+            <div style="font-size:14.5px; color:#E7DECF; line-height:1.7;">Rua dos Eletricistas, 138, Qd. TF, Lote 01<br>Jardim Paulista, Araguaína, Tocantins<br>Magda Helley Costa Pires · CRC-TO 005688/O-7<br><span style="color:#A79E90; font-size:13px;">Atendimento em todo o Brasil</span></div>
           </div>
         </div>
       </div>
@@ -642,8 +812,99 @@
     function closeMenu(){ if(!mm||!hb) return; mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
     if(hb){ hb.addEventListener('click', openMenu); }
     if(mmClose){ mmClose.addEventListener('click', closeMenu); }
-    if(mm){ mm.querySelectorAll('.mm-link,.mm-cta').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
+    if(mm){ mm.querySelectorAll('.mm-link:not(.mm-acc-trigger),.mm-cta').forEach(function(a){ a.addEventListener('click', closeMenu); }); }
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
+
+    // mobile accordion (Serviços / Soluções)
+    document.querySelectorAll('.mm-acc-trigger').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var acc = btn.closest('.mm-accordion');
+        if (!acc) return;
+        var willOpen = !acc.classList.contains('open');
+        document.querySelectorAll('.mm-accordion').forEach(function(a){ a.classList.remove('open'); });
+        if (willOpen) acc.classList.add('open');
+      });
+    });
+
+    // desktop dropdowns (Serviços / Soluções)
+    var dropdowns = document.querySelectorAll('.pc-dropdown');
+    dropdowns.forEach(function(dd){
+      var trigger = dd.querySelector('.pc-dropdown-trigger');
+      if (!trigger) return;
+      trigger.addEventListener('click', function(e){
+        e.stopPropagation();
+        var willOpen = !dd.classList.contains('open');
+        dropdowns.forEach(function(o){ o.classList.remove('open'); });
+        if (willOpen) dd.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e){
+      dropdowns.forEach(function(dd){ if (!dd.contains(e.target)) dd.classList.remove('open'); });
+    });
+    document.querySelectorAll('.js-close-dd').forEach(function(a){
+      a.addEventListener('click', function(){ dropdowns.forEach(function(dd){ dd.classList.remove('open'); }); });
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') { dropdowns.forEach(function(dd){ dd.classList.remove('open'); }); }
+    });
+
+    // modal: iniciar atendimento (formulário -> WhatsApp, sem backend)
+    var formOverlay = document.getElementById('pc-form-overlay');
+    var formClose = document.getElementById('pc-form-close');
+    var leadForm = document.getElementById('pc-lead-form');
+    var fNome = document.getElementById('pc-f-nome');
+    var fTelefone = document.getElementById('pc-f-telefone');
+    var fServico = document.getElementById('pc-f-servico');
+    var fEmail = document.getElementById('pc-f-email');
+
+    function openForm(service){
+      if (!formOverlay) return;
+      if (service && fServico) { fServico.value = service; }
+      formOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      dropdowns.forEach(function(dd){ dd.classList.remove('open'); });
+      closeMenu();
+      setTimeout(function(){ if (fNome) fNome.focus(); }, 350);
+    }
+    function closeForm(){
+      if (!formOverlay) return;
+      formOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.js-open-form').forEach(function(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        openForm(el.getAttribute('data-service') || '');
+      });
+    });
+    if (formClose) formClose.addEventListener('click', closeForm);
+    if (formOverlay) formOverlay.addEventListener('click', function(e){ if (e.target === formOverlay) closeForm(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeForm(); });
+
+    if (leadForm) {
+      leadForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        var nome = fNome.value.trim();
+        var telefone = fTelefone.value.trim();
+        var servico = fServico.value;
+        var email = fEmail.value.trim();
+        var valid = true;
+        [fNome, fTelefone, fServico].forEach(function(f){ f.classList.remove('pc-field-error'); });
+        if (!nome) { fNome.classList.add('pc-field-error'); valid = false; }
+        if (!telefone || telefone.replace(/\D/g, '').length < 10) { fTelefone.classList.add('pc-field-error'); valid = false; }
+        if (!servico) { fServico.classList.add('pc-field-error'); valid = false; }
+        if (!valid) return;
+
+        var msg = 'Olá, sou ' + nome + '. Meu telefone é ' + telefone + '. Tenho interesse no serviço: ' + servico + '.';
+        if (email) { msg += ' Meu e-mail: ' + email + '.'; }
+        msg += ' Gostaria de atendimento da Pires Contabilidade.';
+
+        var url = 'https://wa.me/5563992141495?text=' + encodeURIComponent(msg);
+        window.open(url, '_blank', 'noopener');
+        closeForm();
+        leadForm.reset();
+      });
+    }
 
     // futuro slider
     var slider = document.getElementById('pc-futuro-slider');
