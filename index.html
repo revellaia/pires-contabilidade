@@ -94,7 +94,7 @@
   .pc-mobile-menu .mm-close{ position:absolute; top:22px; right:clamp(22px,5vw,72px); background:none; border:none; cursor:pointer; font-family:'Hanken Grotesk',sans-serif; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#8C857A; padding:10px; }
   /* ---- desktop dropdowns ---- */
   .pc-dropdown{ position:relative; }
-  .pc-dropdown-trigger{ background:none; border:none; cursor:pointer; font:inherit; padding:0; color:#56514A; font-family:'Hanken Grotesk',sans-serif; }
+  .pc-dropdown-trigger{ background:none; border:none; cursor:pointer; padding:0; margin:0; font-family:'Hanken Grotesk',sans-serif; font-size:13.5px; letter-spacing:.01em; color:#56514A; }
   .pc-dropdown-panel{ position:absolute; top:calc(100% + 20px); left:0; min-width:560px; max-width:calc(100vw - 48px); background:#FAF6EF; border-radius:10px; box-shadow:0 30px 70px -24px rgba(43,40,35,0.28); padding:28px 30px; display:flex; gap:36px; opacity:0; visibility:hidden; transform:translateY(-8px); transition:opacity .3s cubic-bezier(.16,.7,.3,1), transform .3s cubic-bezier(.16,.7,.3,1), visibility .3s; z-index:60; }
   .pc-dropdown-panel::before{ content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#6E3FA3,#C7418B,#F0764E,#3A5FCD,#36AEC6); border-radius:10px 10px 0 0; }
   .pc-dropdown.open .pc-dropdown-panel{ opacity:1; visibility:visible; transform:translateY(0); }
@@ -865,14 +865,14 @@
 
         <div data-reveal data-reveal-delay="0.1" class="pc-ba" id="pc-ba-slider">
           <div class="pc-ba-depois">
-            <img src="assets/sede-depois.jpg" alt="Projeto da futura sede da Pires Contabilidade" loading="lazy" class="pc-arch">
+            <img src="assets/render-sede.jpg" alt="Projeto da futura sede da Pires Contabilidade, visão pronta" loading="lazy" class="pc-arch" style="object-position:50% 56%;">
           </div>
           <div class="pc-ba-antes" id="pc-ba-antes-wrap">
-            <img src="assets/sede-antes.jpg" alt="Obra da nova sede em construção, foto atual" loading="lazy" class="pc-arch">
+            <img src="assets/obra-atual.jpg" alt="Obra da nova sede em construção, avanço atual" loading="lazy" class="pc-arch" style="object-position:50% 48%;">
           </div>
-          <span class="pc-ba-label pc-ba-label-left">Antes</span>
-          <span class="pc-ba-label pc-ba-label-right">Depois</span>
-          <input type="range" id="pc-ba-range" class="pc-ba-range" min="0" max="100" value="50" step="1" aria-label="Comparar antes e depois da nova sede: arraste para revelar a obra concluída">
+          <span class="pc-ba-label pc-ba-label-left">A obra avança</span>
+          <span class="pc-ba-label pc-ba-label-right">Visão pronta</span>
+          <input type="range" id="pc-ba-range" class="pc-ba-range" min="0" max="100" value="50" step="1" aria-label="Comparar a obra em andamento com a visão pronta da nova sede: arraste para revelar">
           <div class="pc-ba-divider" id="pc-ba-divider">
             <div class="pc-ba-handle">
               <svg width="18" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6"></path><path d="M15 6l6 6-6 6"></path></svg>
